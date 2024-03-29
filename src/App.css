@@ -1,10 +1,30 @@
 .App {
   text-align: center;
+  background-color: whitesmoke;
 }
 
+html{
+  scroll-behavior: smooth;
+  }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.main2{
+height: "100%";
+background-color: black;
+
+}
+.home{
+scroll-snap-type:y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+section{
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,10 +33,20 @@
   }
 }
 
+.css-ahj2mt-MuiTypography-root {
+  font-family: "Satoshi" !important;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url(./assets/fonts/Satoshi-Variable.ttf);
+}
+
 .App-header {
-  background-color: #282c34;
+
   min-height: 100vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -30,9 +60,154 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+/* .image-gallery {
+  position: relative;
+}
+
+.main-image img {
+  width: 300px; 
+  height: 200px;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; 
+}
+
+.main-image:hover + .popup,
+.popup:hover {
+  display: block;
+}
+
+.popup img {
+  width: 150px; 
+  height: 100px;
+} */
+
+
+/* Define the container for the image */
+@keyframes moveFromBottomToCenter {
+  0% {
+    transform: translateY(200%); /* Start from bottom */
+  }
+  100% {
+    transform: translateY(0%); /* End at center */
+  }
+}
+
+.image-container {
+
+  position: relative;
+  height: 100%; /* Adjust the height as per your requirement */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.rotate-image{
+  animation: App-logo-spin 2s forwards; /* 1s duration */
+}
+
+.moving-image {
+  
+  animation: moveFromBottomToCenter 2s forwards; /* 1s duration */
+}
+
+@keyframes moveFromRightToLeft {
+  0% {
+    transform: translateX(200%); /* Start from bottom */
+  }
+  100% {
+    transform: translateY(0%); /* End at center */
+  }
+}
+
+/* .project1{
+  transform: rotate(10deg);
+} */
+
+.moving-image-roject1 {
+  
+  animation: moveFromRightToLeft 1s forwards; /* 1s duration */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.bouncing-image {
+ 
+  animation: bounce 0.5s forwards;
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+  background-color: white !important;
+}
+.css-p7bec2-MuiTypography-root {
+  color: black !important;
+  text-align:start !important;
+}
+
+
+
+.fadeIn {
+  display: flex;
+  justify-content: center;
+  animation: fadeInAnimation ease 8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.css-heg063-MuiTabs-flexContainer {
+justify-content: center;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+  color: #DDD50E !important;
+}
+.css-1aquho2-MuiTabs-indicator{
+  background-color: #DDD50E !important;
+  /* left: 380px !important; */
+  /* width: 10%!important; */
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
+  color: white !important;
+}
+.css-heg063-MuiTabs-flexContainer {
+  overflow: scroll;
+  scrollbar-width: none;
 }
