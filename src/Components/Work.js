@@ -27,6 +27,7 @@ import porject1 from "../assets/Dana.png";
 import project2 from "../assets/MSME.png";
 
 import dd from "../assets/dd.png";
+import ddLoader from "../assets/ddLoader.png";
 import graphic from "../assets/Graphic.png";
 
 import next from "../assets/right.png";
@@ -105,7 +106,8 @@ return(
                   style={{
                     display: "flex",
                     justifyContent: "space-around",
-                    borderRight: "1px solid white",
+                    marginRight:"0.5rem",
+                   
                   }}
                   xs={7}
                   sm={7}
@@ -159,6 +161,9 @@ return(
                   </Button>
                 </Grid>
 
+                <div class="vl"></div>
+
+
                 <Grid
                   container
                   xs={4}
@@ -170,18 +175,20 @@ return(
                     justifyContent: "space-between",
                     alignItems: "center",
                     marginLeft: "1.5rem",
+        
                   }}
                 >
                   <img
                     alt="linkedin"
                     src={linkedin}
-                    width="22px"
+                    width="24px"
                     height="23px"
                   />
-                  <img alt="Be" src={behance} width="20px" height="15px" />
-                  <img alt="instagram" src={insta} width="22px" height="22px" />
+                  <img alt="Be" src={behance} width="30px" height="22px" />
 
-                  <img alt="mail" src={Mail} width="22px" height="22px" />
+                  <img alt="instagram" src={insta} width="25px" height="25px" />
+
+                  <img alt="mail" src={Mail} width="25px" height="22px" />
                 </Grid>
               </Grid>
             </Grid>
@@ -580,7 +587,10 @@ return(
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom">
+                          <div class="zoom"
+                              onClick={() => {
+                                navigate("/dd");
+                              }}>
                             <Typography
                               variant="h5"
                               style={{
@@ -650,10 +660,10 @@ return(
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom"
-                            onClick={() => {
-                              navigate("/graphic");
-                            }}>
+                       <div class="zoom" 
+                           onClick={() => {
+                            navigate("/loader");
+                          }}>
                             <Typography
                               variant="h5"
                               style={{
@@ -663,7 +673,7 @@ return(
                                 textAlign: "start",
                               }}
                             >
-                            Instructional Graphic
+                            DD Free Dish Loader
                             </Typography>
                             <p
                               variant="h6"
@@ -675,7 +685,7 @@ return(
                                 fontWeight: 300,
                               }}
                             >
-                        Strategies for visual communication
+                            Strategies for visual communication
                               <br />
                               Strategy Design | UX Design | 12 Weeks
                             </p>
@@ -691,7 +701,7 @@ return(
                                   // minHeight: "330px",
                                   // minWidth: "330px",
                                 }}
-                                src={graphic}
+                                src={ddLoader}
                                 alt="img"
                               />
                               <img
@@ -802,7 +812,10 @@ return(
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom">
+                               <div class="zoom"
+                            onClick={() => {
+                              navigate("/graphic");
+                            }}>
                             <Typography
                               variant="h5"
                               style={{
@@ -812,7 +825,7 @@ return(
                                 textAlign: "start",
                               }}
                             >
-                              DaanPatra
+                            Instructional Graphic
                             </Typography>
                             <p
                               variant="h6"
@@ -824,9 +837,9 @@ return(
                                 fontWeight: 300,
                               }}
                             >
-                              Context and Information Systems
+                        Strategies for visual communication
                               <br />
-                              UX Design | UI Design | 8 Weeks
+                              Strategy Design | UX Design | 12 Weeks
                             </p>
                             <div
                               style={{ position: "relative", display: "flex" }}
@@ -840,7 +853,7 @@ return(
                                   // minHeight: "330px",
                                   // minWidth: "330px",
                                 }}
-                                src={porject1}
+                                src={graphic}
                                 alt="img"
                               />
                               <img
@@ -855,6 +868,7 @@ return(
                               />
                             </div>
                           </div>
+                        
                         </Grid>
                       </Grid>
                     </Grid>

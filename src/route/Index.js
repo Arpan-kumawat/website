@@ -5,6 +5,8 @@ import Aboutme from '../Components/Aboutme';
 import SecondSection from '../Components/SecondSection';
 import Work from '../Components/Work';
 import Graphic from '../projects/Graphic';
+import DD from '../projects/DD';
+import DDLoader from '../projects/DDLoader';
 
 export default function Routeindex() {
   return (
@@ -14,6 +16,8 @@ export default function Routeindex() {
     <Route exact path="/aboutme" element={<Aboutme  />} />
     <Route exact path="/work" element={<Work  />} />
     <Route exact path="/graphic" element={<Graphic/>} />
+    <Route exact path="/dd" element={<DD/>} />
+    <Route exact path="/loader" element={<DDLoader/>} />
     <Route exact path="/3" element={<SecondSection />} />
 
   </Routes>

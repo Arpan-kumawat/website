@@ -1,8 +1,22 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
-import React from 'react'
+import React from "react";
+import "../App.css";
 import { Button, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import pdf from "../assets/pdf/Graphic.pdf";
+
+
+import img1 from "../assets/pdf/graphic/1.jpg";
+import img2 from "../assets/pdf/graphic/2.jpg";
+import img3 from "../assets/pdf/graphic/3.jpg";
+import img4 from "../assets/pdf/graphic/4.jpg";
+import img5 from "../assets/pdf/graphic/5.jpg";
+import img6 from "../assets/pdf/graphic/6.jpg";
+import img7 from "../assets/pdf/graphic/7.jpg";
+
+import img8 from "../assets/pdf/graphic/8.jpg";
+import img9 from "../assets/pdf/graphic/9.jpg";
+import img10 from "../assets/pdf/graphic/10.jpg";
+import img11 from "../assets/pdf/graphic/11.jpg";
+
 import logo from "../assets/img/logoWhite.png";
 import behance from "../assets/img/BehanceWhite.png";
 import insta from "../assets/img/InstagramWhite.png";
@@ -10,17 +24,16 @@ import linkedin from "../assets/img/LinkedinWhite.png";
 import Mail from "../assets/img/mainWhite.png";
 
 export default function Graphic() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
- <>
- <div  style={{height:"100vh", background: "black", position: "relative"}}>
-
-
- <div
+    <>
+      <div>
+        <div
           style={{
             width: "100%",
-            background: "transparent",
+            position: "fixed",
             height: "10vh",
+            background: "black",
           }}
         >
           <Grid
@@ -131,13 +144,67 @@ export default function Graphic() {
             </Grid>
           </Grid>
         </div>
- <iframe src={pdf + "#toolbar=0"} style={{width: "100%", height: "100%"}} frameBorder="0"></iframe>
 
+        <div style={{ paddingTop: "3rem" }}>
+          <img
+            alt="logo"
+            src={img1}
+            style={{ width: "100%", display: "block" }}
+          />
+          <img
+            alt="logo"
+            src={img2}
+            style={{ width: "100%", display: "block" }}
+          />
 
+          <img
+            alt="logo"
+            src={img3}
+            style={{ width: "100%", display: "block" }}
+          />
+          <img
+            alt="logo"
+            src={img4}
+            style={{ width: "100%", display: "block" }}
+          />
+          <img
+            alt="logo"
+            src={img5}
+            style={{ width: "100%", display: "block" }}
+          />
+          <img
+            alt="logo"
+            src={img6}
+            style={{ width: "100%", display: "block" }}
+          />
 
-
- </div>
- 
- </>
-  )
+          <img
+            alt="logo"
+            src={img7}
+            style={{ width: "100%", display: "block" }}
+          />
+          <img
+            alt="logo"
+            src={img8}
+            style={{ width: "100%", display: "block" }}
+          />
+          <img
+            alt="logo"
+            src={img9}
+            style={{ width: "100%", display: "block" }}
+          />
+          <img
+            alt="logo"
+            src={img10}
+            style={{ width: "100%", display: "block" }}
+          />
+          <img
+            alt="logo"
+            src={img11}
+            style={{ width: "100%", display: "block" }}
+          />
+        </div>
+      </div>
+    </>
+  );
 }
