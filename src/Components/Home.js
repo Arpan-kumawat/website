@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-import { Grid, Typography,Divider } from "@mui/material";
-import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { Grid, Typography, Divider } from "@mui/material";
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 
 import Button from "@mui/material/Button";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -14,7 +14,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import logo from "../assets/logo.png";
 import behance from "../assets/behance.png";
 import insta from "../assets/instagram.png";
-import linkedin from "../assets/linkedin.png";
+import linkedin from "../assets/linkedinBlack.png";
 import heart from "../assets/Heart.png";
 import heartRed from "../assets/HeartRed.png";
 import mail from "../assets/Icon.png";
@@ -24,17 +24,20 @@ import logo2 from "../assets/tri.png";
 
 import porject1 from "../assets/Dana.png";
 import project2 from "../assets/MSME.png";
+import Palate from "../assets/palate.png";
+import ddLoader from "../assets/ddLoader.png";
 import next from "../assets/right.png";
 
 import dd from "../assets/dd.png";
 import graphic from "../assets/Graphic.png";
 
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
+import Footer from "../Common/Footer";
+import Header from "../Common/Header";
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const [showPopup1, setShowPopup1] = useState(false);
-  const [heartColor, setHeartColor] = useState(false);
 
   const [isLOGOHovered, setIsLOGOHovered] = useState(false);
 
@@ -48,11 +51,6 @@ export default function Home() {
     setShowPopup1(!showPopup1);
 
     console.log("click");
-  };
-
-  const heartChange = () => {
-    setHeartColor(!heartColor);
-    console.log("heartColor");
   };
 
   const [value, setValue] = useState("1");
@@ -79,17 +77,6 @@ export default function Home() {
       console.log("asdf");
     };
   }, []);
-  const HtmlTooltip = styled(({ className, ...props }) => (
-    <Tooltip {...props} classes={{ popper: className }} />
-  ))(({ theme }) => ({
-    [`& .${tooltipClasses.tooltip}`]: {
-      backgroundColor: '#f5f5f9',
-      color: 'rgba(0, 0, 0, 0.87)',
-      maxWidth: 220,
-      fontSize: theme.typography.pxToRem(12),
-      border: '1px solid #dadde9',
-    },
-  }));
 
   return (
     <>
@@ -101,36 +88,47 @@ export default function Home() {
             height: "10vh",
           }}
         >
-          <Grid
-            class="HomeMenu"
+          <Grid class="HomeMenu"
             container
-            style={{ padding: "1rem" }}
+            // style={{ padding: "1rem" }}
             xs={12}
             sm={12}
             md={12}
             lg={12}
           >
-            <Grid container xs={12} sm={12} md={7} lg={7}>
-   
-          
-
-     <img alt="logo" src={logo} width="80px" height="70px"
-         onMouseEnter={() => setIsLOGOHovered(true)}
-         onMouseLeave={() => setIsLOGOHovered(false)}
-     />
-     <div  
-     style={{padding:"1rem",maxWidth:"304px",fontSize:"15px", display:isLOGOHovered ?"flex":"none",fontFamily:"LATO",
-    background:"#EDEDED",position:"absolute",top:"2%",borderRadius:"1rem" ,left:"5%",justifyContent:"center"}}
-     >
-
-   
-         <p  style={{textAlign:"left"}} >
-    This monogram intricately weaves together Devanagari and Latin characters to symbolize the deep connection between me and my family. <br />  <br />
-    Placing the surname initial at the forefront emphasizes the significance of my family in shaping my identity, reminding me of my roots and values.
-</p>
-</div>
-           
-  
+            {/* <Grid container xs={12} sm={12} md={7} lg={7}>
+              <img
+                alt="logo"
+                src={logo}
+                width="80px"
+                height="70px"
+                onMouseEnter={() => setIsLOGOHovered(true)}
+                onMouseLeave={() => setIsLOGOHovered(false)}
+              />
+              <div
+                style={{
+                  padding: "1rem",
+                  maxWidth: "304px",
+                  fontSize: "15px",
+                  display: isLOGOHovered ? "flex" : "none",
+                  fontFamily: "LATO",
+                  background: "#EDEDED",
+                  position: "absolute",
+                  top: "2%",
+                  borderRadius: "1rem",
+                  left: "5%",
+                  justifyContent: "center",
+                }}
+              >
+                <p style={{ textAlign: "left" }}>
+                  This monogram intricately weaves together Devanagari and Latin
+                  characters to symbolize the deep connection between me and my
+                  family. <br /> <br />
+                  Placing the surname initial at the forefront emphasizes the
+                  significance of my family in shaping my identity, reminding me
+                  of my roots and values.
+                </p>
+              </div>
             </Grid>
 
             <Grid xs={12} sm={12} md={5} lg={5} style={{ display: "flex" }}>
@@ -202,6 +200,43 @@ export default function Home() {
                     alt="linkedin"
                     src={linkedin}
                     width="25px"
+                    height="24px"
+                  />
+                  <img alt="Be" src={behance} width="25px" height="25px" />
+                  <img alt="instagram" src={insta} width="30px" height="30px" />
+
+                  <img alt="mail" src={Mail} width="20px" height="20px" />
+                </Grid>
+              </Grid>
+            </Grid> */}
+            <Header page={"home"}/>
+          </Grid>
+
+          <Grid class="HomeMenuMobile" xs={12} sm={12} md={12} lg={12}>
+            <div style={{ padding: "1rem" }}>
+              <Grid container xs={12} sm={12} md={12} lg={12}>
+                <Grid container xs={7} sm={7} md={7} lg={7}>
+                  <Tooltip title="Istuti Tripathi" placement="bottom-end">
+                    <img alt="logo" src={logo} width="70px" height="60px" />
+                  </Tooltip>
+                </Grid>
+
+                <Grid
+                  container
+                  xs={5}
+                  sm={5}
+                  md={5}
+                  lg={5}
+                  justifyContent="space-around"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    alt="linkedin"
+                    src={linkedin}
+                    width="25px"
                     height="25px"
                   />
                   <img alt="Be" src={behance} width="25px" height="25px" />
@@ -210,102 +245,61 @@ export default function Home() {
                   <img alt="mail" src={Mail} width="20px" height="20px" />
                 </Grid>
               </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid
-            class="HomeMenuMobile"
-  
-            xs={12}
-            sm={12}
-            md={12}
-            lg={12}
-            
-          >
-<div style={{padding:"1rem"}} >
-
-
-
-            <Grid container xs={12} sm={12} md={12} lg={12}>
-              <Grid container xs={7} sm={7} md={7} lg={7}>
-                <Tooltip title="Istuti Tripathi" placement="bottom-end">
-                  <img alt="logo" src={logo} width="70px" height="60px" />
-                </Tooltip>
-              </Grid>
 
               <Grid
-                container
-                xs={5}
-                sm={5}
-                md={5}
-                lg={5}
-                justifyContent="space-around"
                 style={{
                   display: "flex",
-                  alignItems: "center",
+                  justifyContent: "center",
                 }}
+                xs={7}
+                sm={7}
+                md={7}
+                lg={7}
               >
-                <img alt="linkedin" src={linkedin} width="25px" height="25px" />
-                <img alt="Be" src={behance} width="25px" height="25px" />
-                <img alt="instagram" src={insta} width="30px" height="30px" />
+                <Button
+                  style={{
+                    color: scrolling ? "white" : "black",
+                    textTransform: "capitalize",
+                    fontSize: "1rem",
+                    fontWeight: 400,
+                  }}
+                  onClick={() => {
+                    navigate("/aboutme");
+                  }}
+                >
+                  About me
+                </Button>
 
-                <img alt="mail" src={Mail} width="20px" height="20px" />
+                <Button
+                  style={{
+                    color: scrolling ? "white" : "black",
+                    textTransform: "capitalize",
+                    fontSize: "1rem",
+                    fontWeight: 400,
+                  }}
+                  onClick={() => {
+                    navigate("/work");
+                  }}
+                >
+                  Work
+                </Button>
+                <Button
+                  style={{
+                    color: scrolling ? "white" : "black",
+                    textTransform: "capitalize",
+                    fontSize: "1rem",
+                    fontWeight: 400,
+                  }}
+                >
+                  Resume
+                </Button>
               </Grid>
-            </Grid>
-
-
-            <Grid
-              style={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-              xs={7}
-              sm={7}
-              md={7}
-              lg={7}
-            >
-              <Button
-                style={{
-                  color: scrolling ? "white" : "black",
-                  textTransform: "capitalize",
-                  fontSize: "1rem",
-                  fontWeight: 400,
-                }}
-                onClick={() => {
-                  navigate("/aboutme");
-                }}
-              >
-                About me
-              </Button>
-
-              <Button
-                style={{
-                  color: scrolling ? "white" : "black",
-                  textTransform: "capitalize",
-                  fontSize: "1rem",
-                  fontWeight: 400,
-                }}
-                onClick={() => {
-                  navigate("/work");
-                }}
-              >
-                Work
-              </Button>
-              <Button
-                style={{
-                  color: scrolling ? "white" : "black",
-                  textTransform: "capitalize",
-                  fontSize: "1rem",
-                  fontWeight: 400,
-                }}
-              >
-                Resume
-              </Button>
-            </Grid>
             </div>
-
           </Grid>
         </div>
+
+
+
 
         <section class="main" id="section1">
           <div className="App-header">
@@ -498,337 +492,32 @@ export default function Home() {
         </section>
 
         <div class="main2" id="section2">
-          <Grid container style={{ paddingTop: "3rem" }}>
-            <div      class="SecondSection">
-
-       
-            <Box
-       
-              sx={{
-                width: "100%",
-                typography: "body1",
-                justifyContent: "center",
-            
-              }}
-            >
-              <TabContext value={value}>
-                <Box sx={{ borderColor: "divider", justifyContent: "center" }}>
-                  <TabList
-                    onChange={handleChange}
-                    style={{ justifyContent: "center" }}
+          <Grid container style={{ paddingTop: "5rem" }}>
+            <div class="SecondSection">
+              <Box
+                sx={{
+                  width: "100%",
+                  typography: "body1",
+                  justifyContent: "center",
+                }}
+              >
+                <TabContext value={value}>
+                  <Box
+                    sx={{ borderColor: "divider", justifyContent: "center" }}
                   >
-                    <Tab label="UI/UX Case Studies" value="1" />
-                    <Tab label="Visual Design" value="2" />
-                    <Tab label="Print Making" value="3" />
-                    <Tab label="Illustrations" value="4" />
-                  </TabList>
-                </Box>
-
-                <TabPanel value="1">
-                  <Grid style={{ marginBottom: "5rem" }}>
-                    <Grid
-                      container
-                      xs={12}
-                      sm={12}
-                      md={12}
-                      lg={12}
-                      style={{
-                        marginTop: "5rem",
-                      }}
+                    <TabList
+                      onChange={handleChange}
+                      style={{ justifyContent: "center" }}
                     >
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={6}
-                        style={{
-                          // minWidth: "25rem",
-                          // minHight: "20rem",
-                          // margin: "1rem",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <div class="zoom">
-                          <Typography
-                            variant="h5"
-                            style={{
-                              // color: "white",
-                              margin: "1rem",
-                              fontWeight: 500,
-                              textAlign: "start",
-                            }}
-                          >
-                            DaanPatra 1
-                          </Typography>
-                          <p
-                            variant="h7"
-                            style={{
-                              // color: "white",
-                              margin: "1rem",
-                              textAlign: "left",
-                              marginTop: "0rem",
-                              fontWeight: 300,
-                            }}
-                          >
-                            Context and Information Systems
-                            <br />
-                            UX Design | UI Design | 8 Weeks
-                          </p>
-                          <div
-                            style={{ position: "relative", display: "flex" }}
-                            class="zoom"
-                          >
-                            <img
-                              style={{
-                                borderRadius: "20px",
-                                marginTop: "3rem",
-                                // maxWidth: "400px",
-                                // maxHeight: "400px",
-                                // minHeight: "400px",
-                                // minWidth: "400px",
-                              }}
-                              src={project2}
-                              alt="img"
-                            />
-                            <img
-                              src={next}
-                              alt="img"
-                              style={{
-                                width: "11%",
-                                position: "absolute",
-                                bottom: "10px",
-                                right: "25px",
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </Grid>
+                      <Tab label="UI/UX Case Studies" value="1" />
+                      <Tab label="Visual Design" value="2" />
+                      <Tab label="Print Making" value="3" />
+                      <Tab label="Illustrations" value="4" />
+                    </TabList>
+                  </Box>
 
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={6}
-                        style={{
-                          // minWidth: "25rem",
-                          // minHight: "20rem",
-                          // margin: "1rem",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <div class="zoom">
-                          <Typography
-                            variant="h5"
-                            style={{
-                              // color: "white",
-                              margin: "1rem",
-                              fontWeight: 500,
-                              textAlign: "start",
-                            }}
-                          >
-                            DaanPatra
-                          </Typography>
-                          <p
-                            variant="h6"
-                            style={{
-                              // color: "white",
-                              margin: "1rem",
-                              textAlign: "left",
-                              marginTop: "0rem",
-                              fontWeight: 300,
-                            }}
-                          >
-                            Context and Information Systems
-                            <br />
-                            UX Design | UI Design | 8 Weeks
-                          </p>
-                          <div
-                            style={{ position: "relative", display: "flex" }}
-                          >
-                            <img
-                              style={{
-                                borderRadius: "20px",
-                                marginTop: "3rem",
-                                // maxWidth: "400px",
-                                // maxHeight: "400px",
-                                // minHeight: "330px",
-                                // minWidth: "330px",
-                              }}
-                              src={porject1}
-                              alt="img"
-                            />
-                            <img
-                              src={next}
-                              alt="img"
-                              style={{
-                                width: "11%",
-                                position: "absolute",
-                                bottom: "10px",
-                                right: "25px",
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </Grid>
-                    </Grid>
-
-                    <Grid
-                      container
-                      xs={12}
-                      sm={12}
-                      md={12}
-                      lg={12}
-                      style={{
-                        marginTop: "5rem",
-                      }}
-                    >
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={6}
-                        style={{
-                          // minWidth: "25rem",
-                          // minHight: "20rem",
-                          // margin: "1rem",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <div class="zoom">
-                          <Typography
-                            variant="h5"
-                            style={{
-                              // color: "white",
-                              margin: "1rem",
-                              fontWeight: 500,
-                              textAlign: "start",
-                            }}
-                          >
-                            DaanPatra
-                          </Typography>
-                          <p
-                            variant="h6"
-                            style={{
-                              // color: "white",
-                              margin: "1rem",
-                              textAlign: "left",
-                              marginTop: "0rem",
-                              fontWeight: 300,
-                            }}
-                          >
-                            Context and Information Systems
-                            <br />
-                            UX Design | UI Design | 8 Weeks
-                          </p>
-                          <div
-                            style={{ position: "relative", display: "flex" }}
-                          >
-                            <img
-                              style={{
-                                borderRadius: "20px",
-                                marginTop: "3rem",
-                                // maxWidth: "400px",
-                                // maxHeight: "400px",
-                                // minHeight: "400px",
-                                // minWidth: "400px",
-                              }}
-                              src={project2}
-                              alt="img"
-                            />
-                            <img
-                              src={next}
-                              alt="img"
-                              style={{
-                                width: "11%",
-                                position: "absolute",
-                                bottom: "10px",
-                                right: "25px",
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </Grid>
-
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={6}
-                        style={{
-                          // minWidth: "25rem",
-                          // minHight: "20rem",
-                          // margin: "1rem",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <div class="zoom">
-                          <Typography
-                            variant="h5"
-                            style={{
-                              // color: "white",
-                              margin: "1rem",
-                              fontWeight: 500,
-                              textAlign: "start",
-                            }}
-                          >
-                            DaanPatra
-                          </Typography>
-                          <p
-                            variant="h6"
-                            style={{
-                              // color: "white",
-                              margin: "1rem",
-                              textAlign: "left",
-                              marginTop: "0rem",
-                              fontWeight: 300,
-                            }}
-                          >
-                            Context and Information Systems
-                            <br />
-                            UX Design | UI Design | 8 Weeks
-                          </p>
-                          <div
-                            style={{ position: "relative", display: "flex" }}
-                          >
-                            <img
-                              style={{
-                                borderRadius: "20px",
-                                marginTop: "3rem",
-                                // maxWidth: "400px",
-                                // maxHeight: "400px",
-                                // minHeight: "330px",
-                                // minWidth: "330px",
-                              }}
-                              src={porject1}
-                              alt="img"
-                            />
-                            <img
-                              src={next}
-                              alt="img"
-                              style={{
-                                width: "11%",
-                                position: "absolute",
-                                bottom: "10px",
-                                right: "25px",
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </TabPanel>
-
-                <TabPanel value="2">
-                  <Grid style={{ marginBottom: "5rem" }}>
+                  <TabPanel value="1">
+                    <Grid style={{ marginBottom: "5rem" }}>
                       <Grid
                         container
                         xs={12}
@@ -854,6 +543,314 @@ export default function Home() {
                           }}
                         >
                           <div class="zoom">
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              DaanPatra 1
+                            </Typography>
+                            <p
+                              variant="h7"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Context and Information Systems
+                              <br />
+                              UX Design | UI Design | 8 Weeks
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                              class="zoom"
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "400px",
+                                  // minWidth: "400px",
+                                }}
+                                src={project2}
+                                alt="img"
+                              />
+                              <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "11%",
+                                  position: "absolute",
+                                  bottom: "10px",
+                                  right: "25px",
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div class="zoom">
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              DaanPatra
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Context and Information Systems
+                              <br />
+                              UX Design | UI Design | 8 Weeks
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "330px",
+                                  // minWidth: "330px",
+                                }}
+                                src={porject1}
+                                alt="img"
+                              />
+                              <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "11%",
+                                  position: "absolute",
+                                  bottom: "10px",
+                                  right: "25px",
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+                      </Grid>
+
+                      <Grid
+                        container
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={12}
+                        style={{
+                          marginTop: "5rem",
+                        }}
+                      >
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div class="zoom">
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              DaanPatra
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Context and Information Systems
+                              <br />
+                              UX Design | UI Design | 8 Weeks
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "400px",
+                                  // minWidth: "400px",
+                                }}
+                                src={project2}
+                                alt="img"
+                              />
+                              <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "11%",
+                                  position: "absolute",
+                                  bottom: "10px",
+                                  right: "25px",
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div class="zoom">
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              DaanPatra
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Context and Information Systems
+                              <br />
+                              UX Design | UI Design | 8 Weeks
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "330px",
+                                  // minWidth: "330px",
+                                }}
+                                src={porject1}
+                                alt="img"
+                              />
+                              <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "11%",
+                                  position: "absolute",
+                                  bottom: "10px",
+                                  right: "25px",
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
+
+                  <TabPanel value="2">
+                    <Grid style={{ marginBottom: "5rem" }}>
+                      <Grid
+                        container
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={12}
+                        style={{
+                          marginTop: "5rem",
+                        }}
+                      >
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/dd");
+                            }}
+                          >
                             <Typography
                               variant="h5"
                               style={{
@@ -923,10 +920,12 @@ export default function Home() {
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom"
+                          <div
+                            class="zoom"
                             onClick={() => {
-                              navigate("/graphic");
-                            }}>
+                              navigate("/loader");
+                            }}
+                          >
                             <Typography
                               variant="h5"
                               style={{
@@ -936,7 +935,7 @@ export default function Home() {
                                 textAlign: "start",
                               }}
                             >
-                            Instructional Graphic
+                              DD Free Dish Loader
                             </Typography>
                             <p
                               variant="h6"
@@ -948,7 +947,165 @@ export default function Home() {
                                 fontWeight: 300,
                               }}
                             >
-                        Strategies for visual communication
+                              Strategies for visual communication
+                              <br />
+                              Strategy Design | UX Design | 12 Weeks
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "330px",
+                                  // minWidth: "330px",
+                                }}
+                                src={ddLoader}
+                                alt="img"
+                              />
+                              <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "11%",
+                                  position: "absolute",
+                                  bottom: "10px",
+                                  right: "25px",
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+                      </Grid>
+
+                      <Grid
+                        container
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={12}
+                        style={{
+                          marginTop: "5rem",
+                        }}
+                      >
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/palate");
+                            }}
+                          >
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              Palate
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Publication Design
+                              <br />1 Week
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "400px",
+                                  // minWidth: "400px",
+                                }}
+                                src={Palate}
+                                alt="img"
+                              />
+                              <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "11%",
+                                  position: "absolute",
+                                  bottom: "10px",
+                                  right: "25px",
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/graphic");
+                            }}
+                          >
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              Instructional Graphic
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Strategies for visual communication
                               <br />
                               Strategy Design | UX Design | 12 Weeks
                             </p>
@@ -981,629 +1138,620 @@ export default function Home() {
                           </div>
                         </Grid>
                       </Grid>
-
-              
                     </Grid>
                   </TabPanel>
-                <TabPanel value="3">Item Three</TabPanel>
-                <TabPanel value="4">Item Three</TabPanel>
-              </TabContext>
-            </Box>
+                  <TabPanel value="3">Item Three</TabPanel>
+                  <TabPanel value="4">Item Three</TabPanel>
+                </TabContext>
+              </Box>
             </div>
-<div class="SecondSectionMobile">
-
-
-            <Grid style={{ marginBottom: "4.5rem" }}>
-            
+            <div class="SecondSectionMobile">
+              <Grid style={{ marginBottom: "5rem" }}>
+                <Typography
+                  variant="h4"
+                  style={{ color: "#DDD50E", textDecoration: "underline" }}
+                >
+                  UI/UX Case Studies
+                </Typography>
+                <Grid
+                  container
+                  xs={12}
+                  sm={12}
+                  md={12}
+                  lg={12}
+                  style={{
+                    marginTop: "2rem",
+                  }}
+                >
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
+                    style={{
+                      // minWidth: "25rem",
+                      // minHight: "20rem",
+                      // margin: "1rem",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <div>
                       <Typography
-                            variant="h5"
-                            style={{
-                              color: "#DDD50E",
-                              margin: "1rem",
-                              fontWeight: 500,
-                        
-                            }}
-                          >
-                       UI/UX Case Studies
-                          </Typography>
-                    <Grid
-                      container
-                      xs={12}
-                      sm={12}
-                      md={12}
-                      lg={12}
-                
-                    >
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={6}
+                        variant="h5"
                         style={{
-                      
-                           marginTop: "2rem",
+                          color: "white",
+                          margin: "1rem",
+                          fontWeight: 500,
+                          textAlign: "start",
+                        }}
+                      >
+                        DaanPatra 1
+                      </Typography>
+                      <p
+                        variant="h7"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          textAlign: "left",
+                          marginTop: "0rem",
+                          fontWeight: 300,
+                        }}
+                      >
+                        Context and Information Systems
+                        <br />
+                        UX Design | UI Design | 8 Weeks
+                      </p>
+                      <div
+                        style={{
+                          position: "relative",
                           display: "flex",
                           justifyContent: "center",
                         }}
                       >
-                        <div >
-                          <Typography
-                            variant="h6"
-                            style={{
-                               color: "white",
-                               margin: "0.5rem 3rem",
-                              fontWeight: 500,
-                              textAlign: "start",
-                            }}
-                          >
-                            DaanPatra 1
-                          </Typography>
-                          <p
-                         
-                            style={{
-                              fontSize:"10px",
-                               color: "white",
-                              margin: "0.5rem 3rem",
-                              textAlign: "left",
-                              marginTop: "0rem",
-                              fontWeight: 300,
-                            }}
-                          >
-                            Context and Information Systems
-                            <br />
-                            UX Design | UI Design | 8 Weeks
-                          </p>
-                          <div
-                            style={{ position: "relative", display: "flex" ,justifyContent:"center"}}
-                            
-                          >
-                            <img
-                              style={{
-                                borderRadius: "20px",
-                                marginTop: "1rem",
-                               width:"80%"
-                              }}
-                              src={project2}
-                              alt="img"
-                            />
-                            <img
-                              src={next}
-                              alt="img"
-                              style={{
-                                width: "8%",
-                                position: "absolute",
-                                bottom: "10px",
-                                right: "45px",
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </Grid>
-
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={6}
-                        style={{
-                          // minWidth: "25rem",
-                          // minHight: "20rem",
-                           marginTop: "3rem",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                      <div >
-                          <Typography
-                            variant="h6"
-                            style={{
-                               color: "white",
-                               margin: "0.5rem 3rem",
-                              fontWeight: 500,
-                              textAlign: "start",
-                            }}
-                          >
-                            DaanPatra 1
-                          </Typography>
-                          <p
-                         
-                            style={{
-                              fontSize:"10px",
-                               color: "white",
-                              margin: "0.5rem 3rem",
-                              textAlign: "left",
-                              marginTop: "0rem",
-                              fontWeight: 300,
-                            }}
-                          >
-                            Context and Information Systems
-                            <br />
-                            UX Design | UI Design | 8 Weeks
-                          </p>
-                          <div
-                            style={{ position: "relative", display: "flex" ,justifyContent:"center"}}
-                            
-                          >
-                            <img
-                              style={{
-                                borderRadius: "20px",
-                                marginTop: "1rem",
-                               width:"80%"
-                              }}
-                              src={project2}
-                              alt="img"
-                            />
-                            <img
-                              src={next}
-                              alt="img"
-                              style={{
-                                width: "8%",
-                                position: "absolute",
-                                bottom: "10px",
-                                right: "45px",
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </Grid>
-                    </Grid>
-
-                    <Grid
-                      container
-                      xs={12}
-                      sm={12}
-                      md={12}
-                      lg={12}
-                    
-                    >
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={6}
-                        style={{
-                          // minWidth: "25rem",
-                          // minHight: "20rem",
-                           marginTop: "3rem",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                          <div >
-                          <Typography
-                            variant="h6"
-                            style={{
-                               color: "white",
-                               margin: "0.5rem 3rem",
-                              fontWeight: 500,
-                              textAlign: "start",
-                            }}
-                          >
-                            DaanPatra 1
-                          </Typography>
-                          <p
-                         
-                            style={{
-                              fontSize:"10px",
-                               color: "white",
-                              margin: "0.5rem 3rem",
-                              textAlign: "left",
-                              marginTop: "0rem",
-                              fontWeight: 300,
-                            }}
-                          >
-                            Context and Information Systems
-                            <br />
-                            UX Design | UI Design | 8 Weeks
-                          </p>
-                          <div
-                            style={{ position: "relative", display: "flex" ,justifyContent:"center"}}
-                            
-                          >
-                            <img
-                              style={{
-                                borderRadius: "20px",
-                                marginTop: "1rem",
-                               width:"80%"
-                              }}
-                              src={project2}
-                              alt="img"
-                            />
-                            <img
-                              src={next}
-                              alt="img"
-                              style={{
-                                width: "8%",
-                                position: "absolute",
-                                bottom: "10px",
-                                right: "45px",
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </Grid>
-
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        lg={6}
-                        style={{
-                          // minWidth: "25rem",
-                          // minHight: "20rem",
-                           marginTop: "3rem",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                         <div >
-                          <Typography
-                            variant="h6"
-                            style={{
-                               color: "white",
-                               margin: "0.5rem 3rem",
-                              fontWeight: 500,
-                              textAlign: "start",
-                            }}
-                          >
-                            DaanPatra 1
-                          </Typography>
-                          <p
-                         
-                            style={{
-                              fontSize:"10px",
-                               color: "white",
-                              margin: "0.5rem 3rem",
-                              textAlign: "left",
-                              marginTop: "0rem",
-                              fontWeight: 300,
-                            }}
-                          >
-                            Context and Information Systems
-                            <br />
-                            UX Design | UI Design | 8 Weeks
-                          </p>
-                          <div
-                            style={{ position: "relative", display: "flex" ,justifyContent:"center"}}
-                            
-                          >
-                            <img
-                              style={{
-                                borderRadius: "20px",
-                                marginTop: "1rem",
-                               width:"80%"
-                              }}
-                              src={project2}
-                              alt="img"
-                            />
-                            <img
-                              src={next}
-                              alt="img"
-                              style={{
-                                width: "8%",
-                                position: "absolute",
-                                bottom: "10px",
-                                right: "45px",
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </Grid>
-                    </Grid>
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            marginTop: "1rem",
+                            width: "90%",
+                          }}
+                          src={project2}
+                          alt="img"
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "11%",
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "25px",
+                          }}
+                        />
+                      </div>
+                    </div>
                   </Grid>
 
-                  <Grid style={{ marginBottom: "3rem" }}>
-            
-            <Typography
-                  variant="h5"
-                  style={{
-                    color: "#DDD50E",
-                    margin: "1rem",
-                    fontWeight: 500,
-              
-                  }}
-                >
-          Visual Design
-                </Typography>
-          <Grid
-            container
-            xs={12}
-            sm={12}
-            md={12}
-            lg={12}
-      
-          >
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={6}
-              lg={6}
-              style={{
-            
-                 marginTop: "2rem",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <div >
-                <Typography
-                  variant="h6"
-                  style={{
-                     color: "white",
-                     margin: "0.5rem 3rem",
-                    fontWeight: 500,
-                    textAlign: "start",
-                  }}
-                >
-                  DaanPatra 1
-                </Typography>
-                <p
-               
-                  style={{
-                    fontSize:"10px",
-                     color: "white",
-                    margin: "0.5rem 3rem",
-                    textAlign: "left",
-                    marginTop: "0rem",
-                    fontWeight: 300,
-                  }}
-                >
-                  Context and Information Systems
-                  <br />
-                  UX Design | UI Design | 8 Weeks
-                </p>
-                <div
-                  style={{ position: "relative", display: "flex" ,justifyContent:"center"}}
-                  
-                >
-                  <img
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
                     style={{
-                      borderRadius: "20px",
-                      marginTop: "1rem",
-                     width:"80%"
+                      // minWidth: "25rem",
+                      // minHight: "20rem",
+                      // margin: "1rem",
+                      display: "flex",
+                      justifyContent: "center",
                     }}
-                    src={project2}
-                    alt="img"
-                  />
-                  <img
-                    src={next}
-                    alt="img"
-                    style={{
-                      width: "8%",
-                      position: "absolute",
-                      bottom: "10px",
-                      right: "45px",
-                    }}
-                  />
-                </div>
-              </div>
-            </Grid>
+                  >
+                    <div>
+                      <Typography
+                        variant="h5"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          fontWeight: 500,
+                          textAlign: "start",
+                        }}
+                      >
+                        DaanPatra 1
+                      </Typography>
+                      <p
+                        variant="h7"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          textAlign: "left",
+                          marginTop: "0rem",
+                          fontWeight: 300,
+                        }}
+                      >
+                        Context and Information Systems
+                        <br />
+                        UX Design | UI Design | 8 Weeks
+                      </p>
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            marginTop: "1rem",
+                            width: "90%",
+                          }}
+                          src={project2}
+                          alt="img"
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "11%",
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "25px",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </Grid>
+                </Grid>
 
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={6}
-              lg={6}
-              style={{
-                // minWidth: "25rem",
-                // minHight: "20rem",
-                 marginTop: "3rem",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-            <div >
-                <Typography
-                  variant="h6"
-                  style={{
-                     color: "white",
-                     margin: "0.5rem 3rem",
-                    fontWeight: 500,
-                    textAlign: "start",
-                  }}
-                >
-                  DaanPatra 1
-                </Typography>
-                <p
-               
-                  style={{
-                    fontSize:"10px",
-                     color: "white",
-                    margin: "0.5rem 3rem",
-                    textAlign: "left",
-                    marginTop: "0rem",
-                    fontWeight: 300,
-                  }}
-                >
-                  Context and Information Systems
-                  <br />
-                  UX Design | UI Design | 8 Weeks
-                </p>
-                <div
-                  style={{ position: "relative", display: "flex" ,justifyContent:"center"}}
-                  
-                >
-                  <img
+                <Grid container xs={12} sm={12} md={12} lg={12}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
                     style={{
-                      borderRadius: "20px",
-                      marginTop: "1rem",
-                     width:"80%"
+                      // minWidth: "25rem",
+                      // minHight: "20rem",
+                      // margin: "1rem",
+                      display: "flex",
+                      justifyContent: "center",
                     }}
-                    src={project2}
-                    alt="img"
-                  />
-                  <img
-                    src={next}
-                    alt="img"
-                    style={{
-                      width: "8%",
-                      position: "absolute",
-                      bottom: "10px",
-                      right: "45px",
-                    }}
-                  />
-                </div>
-              </div>
-            </Grid>
-          </Grid>
+                  >
+                    <div>
+                      <Typography
+                        variant="h5"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          fontWeight: 500,
+                          textAlign: "start",
+                        }}
+                      >
+                        DaanPatra 1
+                      </Typography>
+                      <p
+                        variant="h7"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          textAlign: "left",
+                          marginTop: "0rem",
+                          fontWeight: 300,
+                        }}
+                      >
+                        Context and Information Systems
+                        <br />
+                        UX Design | UI Design | 8 Weeks
+                      </p>
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            marginTop: "1rem",
+                            width: "90%",
+                          }}
+                          src={project2}
+                          alt="img"
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "11%",
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "25px",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </Grid>
 
-          <Grid
-            container
-            xs={12}
-            sm={12}
-            md={12}
-            lg={12}
-          
-          >
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={6}
-              lg={6}
-              style={{
-                // minWidth: "25rem",
-                // minHight: "20rem",
-                 marginTop: "3rem",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-                <div >
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
+                    style={{
+                      // minWidth: "25rem",
+                      // minHight: "20rem",
+                      // margin: "1rem",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <div>
+                      <Typography
+                        variant="h5"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          fontWeight: 500,
+                          textAlign: "start",
+                        }}
+                      >
+                        DaanPatra 1
+                      </Typography>
+                      <p
+                        variant="h7"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          textAlign: "left",
+                          marginTop: "0rem",
+                          fontWeight: 300,
+                        }}
+                      >
+                        Context and Information Systems
+                        <br />
+                        UX Design | UI Design | 8 Weeks
+                      </p>
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            marginTop: "1rem",
+                            width: "90%",
+                          }}
+                          src={project2}
+                          alt="img"
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "11%",
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "25px",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid style={{ marginBottom: "5rem" }}>
                 <Typography
-                  variant="h6"
-                  style={{
-                     color: "white",
-                     margin: "0.5rem 3rem",
-                    fontWeight: 500,
-                    textAlign: "start",
-                  }}
+                  variant="h4"
+                  style={{ color: "#DDD50E", textDecoration: "underline" }}
                 >
-                  DaanPatra 1
+                  Visual Design
                 </Typography>
-                <p
-               
+                <Grid
+                  container
+                  xs={12}
+                  sm={12}
+                  md={12}
+                  lg={12}
                   style={{
-                    fontSize:"10px",
-                     color: "white",
-                    margin: "0.5rem 3rem",
-                    textAlign: "left",
-                    marginTop: "0rem",
-                    fontWeight: 300,
+                    marginTop: "2rem",
                   }}
                 >
-                  Context and Information Systems
-                  <br />
-                  UX Design | UI Design | 8 Weeks
-                </p>
-                <div
-                  style={{ position: "relative", display: "flex" ,justifyContent:"center"}}
-                  
-                >
-                  <img
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
                     style={{
-                      borderRadius: "20px",
-                      marginTop: "1rem",
-                     width:"80%"
+                      // minWidth: "25rem",
+                      // minHight: "20rem",
+                      // margin: "1rem",
+                      display: "flex",
+                      justifyContent: "center",
                     }}
-                    src={project2}
-                    alt="img"
-                  />
-                  <img
-                    src={next}
-                    alt="img"
-                    style={{
-                      width: "8%",
-                      position: "absolute",
-                      bottom: "10px",
-                      right: "45px",
-                    }}
-                  />
-                </div>
-              </div>
-            </Grid>
+                  >
+                    <div>
+                      <Typography
+                        variant="h5"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          fontWeight: 500,
+                          textAlign: "start",
+                        }}
+                      >
+                        DaanPatra 1
+                      </Typography>
+                      <p
+                        variant="h7"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          textAlign: "left",
+                          marginTop: "0rem",
+                          fontWeight: 300,
+                        }}
+                      >
+                        Context and Information Systems
+                        <br />
+                        UX Design | UI Design | 8 Weeks
+                      </p>
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            marginTop: "1rem",
+                            width: "90%",
+                          }}
+                          src={project2}
+                          alt="img"
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "11%",
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "25px",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </Grid>
 
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={6}
-              lg={6}
-              style={{
-                // minWidth: "25rem",
-                // minHight: "20rem",
-                 marginTop: "3rem",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-               <div >
-                <Typography
-                  variant="h6"
-                  style={{
-                     color: "white",
-                     margin: "0.5rem 3rem",
-                    fontWeight: 500,
-                    textAlign: "start",
-                  }}
-                >
-                  DaanPatra 1
-                </Typography>
-                <p
-               
-                  style={{
-                    fontSize:"10px",
-                     color: "white",
-                    margin: "0.5rem 3rem",
-                    textAlign: "left",
-                    marginTop: "0rem",
-                    fontWeight: 300,
-                  }}
-                >
-                  Context and Information Systems
-                  <br />
-                  UX Design | UI Design | 8 Weeks
-                </p>
-                <div
-                  style={{ position: "relative", display: "flex" ,justifyContent:"center"}}
-                  
-                >
-                  <img
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
                     style={{
-                      borderRadius: "20px",
-                      marginTop: "1rem",
-                     width:"80%"
+                      // minWidth: "25rem",
+                      // minHight: "20rem",
+                      // margin: "1rem",
+                      display: "flex",
+                      justifyContent: "center",
                     }}
-                    src={project2}
-                    alt="img"
-                  />
-                  <img
-                    src={next}
-                    alt="img"
+                  >
+                    <div>
+                      <Typography
+                        variant="h5"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          fontWeight: 500,
+                          textAlign: "start",
+                        }}
+                      >
+                        DaanPatra 1
+                      </Typography>
+                      <p
+                        variant="h7"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          textAlign: "left",
+                          marginTop: "0rem",
+                          fontWeight: 300,
+                        }}
+                      >
+                        Context and Information Systems
+                        <br />
+                        UX Design | UI Design | 8 Weeks
+                      </p>
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            marginTop: "1rem",
+                            width: "90%",
+                          }}
+                          src={project2}
+                          alt="img"
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "11%",
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "25px",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </Grid>
+                </Grid>
+
+                <Grid container xs={12} sm={12} md={12} lg={12}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
                     style={{
-                      width: "8%",
-                      position: "absolute",
-                      bottom: "10px",
-                      right: "45px",
+                      // minWidth: "25rem",
+                      // minHight: "20rem",
+                      // margin: "1rem",
+                      display: "flex",
+                      justifyContent: "center",
                     }}
-                  />
-                </div>
-              </div>
-            </Grid>
-          </Grid>
-        </Grid>
-             
-                  </div>
+                  >
+                    <div>
+                      <Typography
+                        variant="h5"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          fontWeight: 500,
+                          textAlign: "start",
+                        }}
+                      >
+                        DaanPatra 1
+                      </Typography>
+                      <p
+                        variant="h7"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          textAlign: "left",
+                          marginTop: "0rem",
+                          fontWeight: 300,
+                        }}
+                      >
+                        Context and Information Systems
+                        <br />
+                        UX Design | UI Design | 8 Weeks
+                      </p>
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            marginTop: "1rem",
+                            width: "90%",
+                          }}
+                          src={project2}
+                          alt="img"
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "11%",
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "25px",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </Grid>
+
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
+                    style={{
+                      // minWidth: "25rem",
+                      // minHight: "20rem",
+                      // margin: "1rem",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <div>
+                      <Typography
+                        variant="h5"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          fontWeight: 500,
+                          textAlign: "start",
+                        }}
+                      >
+                        DaanPatra 1
+                      </Typography>
+                      <p
+                        variant="h7"
+                        style={{
+                          color: "white",
+                          margin: "1rem",
+                          textAlign: "left",
+                          marginTop: "0rem",
+                          fontWeight: 300,
+                        }}
+                      >
+                        Context and Information Systems
+                        <br />
+                        UX Design | UI Design | 8 Weeks
+                      </p>
+                      <div
+                        style={{
+                          position: "relative",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            marginTop: "1rem",
+                            width: "90%",
+                          }}
+                          src={project2}
+                          alt="img"
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "11%",
+                            position: "absolute",
+                            bottom: "10px",
+                            right: "25px",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </div>
           </Grid>
         </div>
 
-        <section class="main" id="section3" style={{ height: "27vh" }}>
+        <Footer />
+        {/* <section class="main" id="section3" style={{ height: "27vh" }}>
           <Grid
             style={{
               marginTop: "5rem",
@@ -1676,7 +1824,7 @@ export default function Home() {
               />
             </Grid>
           </Grid>
-        </section>
+        </section> */}
       </div>
     </>
   );

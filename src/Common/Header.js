@@ -1,113 +1,288 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+import React, { useState ,useEffect} from "react";
+import { Button, Grid, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import logo from "../assets/img/logoWhite.png";
+import behance from "../assets/Behance1.png";
+import insta from "../assets/img/InstagramWhite.png";
+import linkedin from "../assets/Linkedin.png";
+import Mail from "../assets/mailIcon1.png";
 
-const drawerWidth = 240;
-const navItems = ["About me", "Work", "Resume"];
+import { useNavigate } from "react-router-dom";
+import Drawer from "@mui/material/Drawer";
 
 function Header(props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
+  const [home, setHome] = useState(props?.page === "home");
+
+  // const [about, setAbout] = useState(false);
+  // const [work, setWork] = useState(false);
+  const [isLOGOHovered, setIsLOGOHovered] = useState(false);
+
+
+  const Drawer1 = () => {
+    return (
+      <>
+        <Drawer
+          open={open}
+          onClose={() => setOpen(false)}
+          anchor={"right"}
+          style={{ minWidth: "70%" }}
+        >
+          <Grid style={{ minWidth: "70%" }}>
+            <Typography>UI/UX</Typography>
+          </Grid>
+        </Drawer>
+      </>
+    );
   };
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} >
-      <Typography variant="h6" sx={{ my: 2 }} >
-       Istuti
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText style={{color:"black"}} primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+    <div
+      style={{
+        width: "100%",
+        zIndex:1,
+        height: "11vh",
+        position: home?"absolute": "fixed",
+      }}
+    >
+      <Grid
+        class="workHeader"
+        container
+        style={{ padding: "1rem", background:home?"transparent":"black" }}
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+      >
+        <Grid container xs={5} sm={5} md={5} lg={7}>
+          <img
+            alt="logo"
+            src={logo}
+            width="100px"
+            height="55px"
+            onMouseEnter={() => setIsLOGOHovered(true)}
+            onMouseLeave={() => setIsLOGOHovered(false)}
+            onClick={() => {
+              navigate("/");
+            }}
+          />
+          <div
+            style={{
+              padding: "1rem",
+              maxWidth: "304px",
+              fontSize: "15px",
+              display: isLOGOHovered ? "flex" : "none",
+              fontFamily: "LATO",
+              background: "#EDEDED",
+              position: "absolute",
+              top: "50px",
+              borderRadius: "1rem",
+              left: "5%",
+              justifyContent: "center",
+            }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-           Istuti
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "black" }}>
-                {item}
+            <p style={{ textAlign: "left" }}>
+              This monogram intricately weaves together Devanagari and Latin
+              characters to symbolize the deep connection between me and my
+              family. <br /> <br />
+              Placing the surname initial at the forefront emphasizes the
+              significance of my family in shaping my identity, reminding me of
+              my roots and values.
+            </p>
+          </div>
+        </Grid>
+
+        <Grid xs={7} sm={7} md={7} lg={5} style={{ display: "flex" }}>
+          <Grid container xs={12} sm={12} md={12} lg={12}>
+            <Grid
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                marginRight: "0.5rem",
+              }}
+              xs={7}
+              sm={7}
+              md={7}
+              lg={7}
+            >
+
+              <Button
+                style={{
+                  display:home?"none":"flex",
+                  textTransform: "capitalize",
+                  fontSize: "1rem",
+                  fontWeight: 400,
+                }}
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                <Typography
+                  class="headerMenu"
+                  style={{ color:"white" }}
+                >
+                  Home
+                </Typography>
               </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+
+              <Button
+                style={{
+                  color: "white",
+                  textTransform: "capitalize",
+                  fontSize: "1rem",
+                  fontWeight: 400,
+                }}
+                onClick={() => {
+                  navigate("/aboutme");
+                }}
+              >
+                <Typography
+                  class="headerMenu"
+                  style={{
+                    color: home?"black": (props.page === "about") ? "#DDD50E" : "white",
+                  }}
+                >
+                  About me
+                </Typography>
+              </Button>
+
+              <Button
+                style={{
+                  color: "white",
+                  textTransform: "capitalize",
+                  fontSize: "1rem",
+                  fontWeight: 400,
+                }}
+                onClick={() => {
+                  navigate("/work");
+                }}
+              >
+                <Typography
+                  class="headerMenu"
+                  style={{ color:home?"black":  (props.page === "work") ? "#DDD50E" : "white" }}
+                >
+                  Work
+                </Typography>
+              </Button>
+              <Button
+                style={{
+                  color: "white",
+                  textTransform: "capitalize",
+                  fontSize: "1rem",
+                  fontWeight: 400,
+                }}
+              >
+                <Typography class="headerMenu"  style={{ color:home?"black": "white" }}>Resume</Typography>
+              </Button>
+            </Grid>
+
+            <div class="vl"></div>
+
+            <Grid
+              container
+              xs={4}
+              sm={4}
+              md={4}
+              lg={4}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginLeft: "1.5rem",
+              }}
+            >
+              <img
+                alt="linkedin"
+                src={linkedin}
+                width="23px"
+                height="23px"
+                style={{ marginTop: "-0.2rem", cursor: "pointer" }}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/istuti-tripathi-336038181/"
+                  )
+                }
+              />
+
+              <img
+                alt="Be"
+                src={behance}
+                width="28px"
+                height="20px"
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://www.behance.net/istutitripath")
+                }
+              />
+
+              <img
+                alt="instagram"
+                src={insta}
+                width="25px"
+                height="25px"
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://www.instagram.com/sketchy_beaver19/")
+                }
+              />
+
+              <img
+                alt="mail"
+                src={Mail}
+                width="25px"
+                height="20px"
+                style={{ cursor: "pointer" }}
+                onClick={() => (window.location = "mailto:yourmail@domain.com")}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Grid
+        class="workHeaderMobile"
+        container
+        style={{ padding: "1rem" }}
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+      >
+        <Grid container xs={6} sm={6} md={6} lg={6}>
+          <img
+            alt="logo"
+            src={logo}
+            width="100px"
+            height="55px"
+            onClick={() => {
+              navigate("/");
+            }}
+          />
+        </Grid>
+        <Grid
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
           }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
+          xs={6}
+          sm={6}
+          md={6}
+          lg={6}
         >
-          {drawer}
-        </Drawer>
-      </nav>
-     
-    </Box>
+          <MenuIcon
+            style={{ color: "white", width: "30%", height: "80%" }}
+            onClick={() => {
+              setOpen(true);
+            }}
+          />
+        </Grid>
+      </Grid>
+      <Drawer1 />
+    </div>
   );
 }
-
-Header.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 export default Header;

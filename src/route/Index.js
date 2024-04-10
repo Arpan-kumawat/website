@@ -7,6 +7,8 @@ import Work from '../Components/Work';
 import Graphic from '../projects/Graphic';
 import DD from '../projects/DD';
 import DDLoader from '../projects/DDLoader';
+import DanPatra from '../projects/DanPatra';
+import Palette from '../projects/Palette';
 
 export default function Routeindex() {
   return (
@@ -18,6 +20,8 @@ export default function Routeindex() {
     <Route exact path="/graphic" element={<Graphic/>} />
     <Route exact path="/dd" element={<DD/>} />
     <Route exact path="/loader" element={<DDLoader/>} />
+    <Route exact path="/palate" element={<Palette/>} />
+    <Route exact path="/dan" element={<DanPatra/>} />
     <Route exact path="/3" element={<SecondSection />} />
 
   </Routes>
