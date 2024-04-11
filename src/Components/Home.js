@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-import { Grid, Typography, Divider } from "@mui/material";
-import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
+import { Grid, Typography } from "@mui/material";
+import Tooltip from "@mui/material/Tooltip";
 
 import Button from "@mui/material/Button";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -15,9 +15,9 @@ import logo from "../assets/logo.png";
 import behance from "../assets/behance.png";
 import insta from "../assets/instagram.png";
 import linkedin from "../assets/linkedinBlack.png";
-import heart from "../assets/Heart.png";
-import heartRed from "../assets/HeartRed.png";
-import mail from "../assets/Icon.png";
+// import heart from "../assets/Heart.png";
+// import heartRed from "../assets/HeartRed.png";
+// import mail from "../assets/Icon.png";
 import Mail from "../assets/MailIcon.png";
 import Istuti from "../assets/iconnew.png";
 import logo2 from "../assets/tri.png";
@@ -26,12 +26,14 @@ import porject1 from "../assets/Dana.png";
 import project2 from "../assets/MSME.png";
 import Palate from "../assets/palate.png";
 import ddLoader from "../assets/ddLoader.png";
+
 import next from "../assets/right.png";
+import circle from "../assets/circle.png";
 
 import dd from "../assets/dd.png";
 import graphic from "../assets/Graphic.png";
 
-import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/material/styles";
 import Footer from "../Common/Footer";
 import Header from "../Common/Header";
 
@@ -39,7 +41,7 @@ export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const [showPopup1, setShowPopup1] = useState(false);
 
-  const [isLOGOHovered, setIsLOGOHovered] = useState(false);
+  // const [isLOGOHovered, setIsLOGOHovered] = useState(false);
 
   const navigate = useNavigate();
   const togglePopup = () => {
@@ -584,14 +586,24 @@ export default function Home() {
                                 src={project2}
                                 alt="img"
                               />
-                              <img
+                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "11%",
+                                  width: "3%",
                                   position: "absolute",
-                                  bottom: "10px",
-                                  right: "25px",
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -653,14 +665,24 @@ export default function Home() {
                                 src={porject1}
                                 alt="img"
                               />
-                              <img
+                                <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "11%",
+                                  width: "3%",
                                   position: "absolute",
-                                  bottom: "10px",
-                                  right: "25px",
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -733,14 +755,24 @@ export default function Home() {
                                 src={project2}
                                 alt="img"
                               />
-                              <img
+                                <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "11%",
+                                  width: "3%",
                                   position: "absolute",
-                                  bottom: "10px",
-                                  right: "25px",
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -802,14 +834,24 @@ export default function Home() {
                                 src={porject1}
                                 alt="img"
                               />
-                              <img
+                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "11%",
+                                  width: "3%",
                                   position: "absolute",
-                                  bottom: "10px",
-                                  right: "25px",
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -892,14 +934,24 @@ export default function Home() {
                                 src={dd}
                                 alt="img"
                               />
-                              <img
+                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "11%",
+                                  width: "3%",
                                   position: "absolute",
-                                  bottom: "10px",
-                                  right: "25px",
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -967,13 +1019,23 @@ export default function Home() {
                                 alt="img"
                               />
                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "11%",
+                                  width: "3%",
                                   position: "absolute",
-                                  bottom: "10px",
-                                  right: "25px",
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -1050,14 +1112,24 @@ export default function Home() {
                                 src={Palate}
                                 alt="img"
                               />
-                              <img
+                                <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "11%",
+                                  width: "3%",
                                   position: "absolute",
-                                  bottom: "10px",
-                                  right: "25px",
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -1124,14 +1196,24 @@ export default function Home() {
                                 src={graphic}
                                 alt="img"
                               />
-                              <img
+                                <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "11%",
+                                  width: "3%",
                                   position: "absolute",
-                                  bottom: "10px",
-                                  right: "25px",
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -1219,16 +1301,26 @@ export default function Home() {
                           src={project2}
                           alt="img"
                         />
-                        <img
-                          src={next}
-                          alt="img"
-                          style={{
-                            width: "11%",
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "25px",
-                          }}
-                        />
+                          <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "3%",
+                                  position: "absolute",
+                                  bottom: "29px",
+                                  right: "28px",
+                                }}
+                              />
                       </div>
                     </div>
                   </Grid>
@@ -1289,16 +1381,26 @@ export default function Home() {
                           src={project2}
                           alt="img"
                         />
-                        <img
-                          src={next}
-                          alt="img"
-                          style={{
-                            width: "11%",
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "25px",
-                          }}
-                        />
+                         <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "3%",
+                                  position: "absolute",
+                                  bottom: "29px",
+                                  right: "28px",
+                                }}
+                              />
                       </div>
                     </div>
                   </Grid>
@@ -1361,16 +1463,26 @@ export default function Home() {
                           src={project2}
                           alt="img"
                         />
-                        <img
-                          src={next}
-                          alt="img"
-                          style={{
-                            width: "11%",
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "25px",
-                          }}
-                        />
+                         <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "3%",
+                                  position: "absolute",
+                                  bottom: "29px",
+                                  right: "28px",
+                                }}
+                              />
                       </div>
                     </div>
                   </Grid>
@@ -1431,16 +1543,26 @@ export default function Home() {
                           src={project2}
                           alt="img"
                         />
-                        <img
-                          src={next}
-                          alt="img"
-                          style={{
-                            width: "11%",
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "25px",
-                          }}
-                        />
+                          <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "3%",
+                                  position: "absolute",
+                                  bottom: "29px",
+                                  right: "28px",
+                                }}
+                              />
                       </div>
                     </div>
                   </Grid>
@@ -1519,16 +1641,26 @@ export default function Home() {
                           src={project2}
                           alt="img"
                         />
-                        <img
-                          src={next}
-                          alt="img"
-                          style={{
-                            width: "11%",
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "25px",
-                          }}
-                        />
+                          <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "3%",
+                                  position: "absolute",
+                                  bottom: "29px",
+                                  right: "28px",
+                                }}
+                              />
                       </div>
                     </div>
                   </Grid>
@@ -1590,15 +1722,25 @@ export default function Home() {
                           alt="img"
                         />
                         <img
-                          src={next}
-                          alt="img"
-                          style={{
-                            width: "11%",
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "25px",
-                          }}
-                        />
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "3%",
+                                  position: "absolute",
+                                  bottom: "29px",
+                                  right: "28px",
+                                }}
+                              />
                       </div>
                     </div>
                   </Grid>
@@ -1661,16 +1803,26 @@ export default function Home() {
                           src={project2}
                           alt="img"
                         />
-                        <img
-                          src={next}
-                          alt="img"
-                          style={{
-                            width: "11%",
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "25px",
-                          }}
-                        />
+                         <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "3%",
+                                  position: "absolute",
+                                  bottom: "29px",
+                                  right: "28px",
+                                }}
+                              />
                       </div>
                     </div>
                   </Grid>
@@ -1731,16 +1883,26 @@ export default function Home() {
                           src={project2}
                           alt="img"
                         />
-                        <img
-                          src={next}
-                          alt="img"
-                          style={{
-                            width: "11%",
-                            position: "absolute",
-                            bottom: "10px",
-                            right: "25px",
-                          }}
-                        />
+                           <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                  width: "8%",
+                                  position: "absolute",
+                                  bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                  width: "3%",
+                                  position: "absolute",
+                                  bottom: "29px",
+                                  right: "28px",
+                                }}
+                              />
                       </div>
                     </div>
                   </Grid>

@@ -2,10 +2,18 @@ import React, { useState ,useEffect} from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/img/logoWhite.png";
-import behance from "../assets/Behance1.png";
-import insta from "../assets/img/InstagramWhite.png";
-import linkedin from "../assets/Linkedin.png";
-import Mail from "../assets/mailIcon1.png";
+import logo1 from "../assets/logo.png";
+
+
+import behance from "../assets/headerLogo/behance.png";
+import insta from "../assets/headerLogo/instagram.png";
+import linkedin from "../assets/headerLogo/Linkedin.png";
+import Mail from "../assets/headerLogo/Icon.png";
+
+import linkedinBlack from "../assets/headerImages/Linkedin.png";
+import behanceBlack from "../assets/headerImages/behance.png";
+import instaBlack from "../assets/headerImages/instagram.png";
+import MailBlack from "../assets/headerImages/Icon.png";
 
 import { useNavigate } from "react-router-dom";
 import Drawer from "@mui/material/Drawer";
@@ -57,17 +65,18 @@ function Header(props) {
         lg={12}
       >
         <Grid container xs={5} sm={5} md={5} lg={7}>
-          <img
-            alt="logo"
-            src={logo}
-            width="100px"
-            height="55px"
-            onMouseEnter={() => setIsLOGOHovered(true)}
-            onMouseLeave={() => setIsLOGOHovered(false)}
-            onClick={() => {
-              navigate("/");
-            }}
-          />
+               <img
+                alt="logo"
+                src={home ? logo1:logo }
+                width={home ?"80px":"100px"}
+                height={home?"70px":"55px"}
+                onMouseEnter={() => setIsLOGOHovered(true)}
+                onMouseLeave={() => setIsLOGOHovered(false)}
+                onClick={() => {
+                  navigate("/");
+                }}
+              /> 
+             
           <div
             style={{
               padding: "1rem",
@@ -178,7 +187,7 @@ function Header(props) {
               </Button>
             </Grid>
 
-            <div class="vl"></div>
+            <div class={ home?"vl1":"vl"}></div>
 
             <Grid
               container
@@ -193,11 +202,12 @@ function Header(props) {
                 marginLeft: "1.5rem",
               }}
             >
+              
               <img
                 alt="linkedin"
-                src={linkedin}
-                width="23px"
-                height="23px"
+                src={home ? linkedinBlack :linkedin}
+                width= {home ?"25px" :"23px"}
+                height= {home ?"25px" :"23px"}
                 style={{ marginTop: "-0.2rem", cursor: "pointer" }}
                 onClick={() =>
                   window.open(
@@ -208,10 +218,10 @@ function Header(props) {
 
               <img
                 alt="Be"
-                src={behance}
-                width="28px"
-                height="20px"
-                style={{ cursor: "pointer" }}
+                src={home? behanceBlack:behance}
+                width= {home?"35px": "35px"}
+                height={home ? "35px": "35px"}
+                style={{ cursor: "pointer" , marginTop:"0.2rem"}}
                 onClick={() =>
                   window.open("https://www.behance.net/istutitripath")
                 }
@@ -219,9 +229,9 @@ function Header(props) {
 
               <img
                 alt="instagram"
-                src={insta}
-                width="25px"
-                height="25px"
+                src={ home?instaBlack: insta}
+                width= {home?"30px": "30px"}
+                height={home ? "30px": "30px"}
                 style={{ cursor: "pointer" }}
                 onClick={() =>
                   window.open("https://www.instagram.com/sketchy_beaver19/")
@@ -230,9 +240,9 @@ function Header(props) {
 
               <img
                 alt="mail"
-                src={Mail}
-                width="25px"
-                height="20px"
+                src={home?MailBlack: Mail}
+                width= {home?"25px": "25px"}
+                height={home ? "20px": "20px"}
                 style={{ cursor: "pointer" }}
                 onClick={() => (window.location = "mailto:yourmail@domain.com")}
               />
