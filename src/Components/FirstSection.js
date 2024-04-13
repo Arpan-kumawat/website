@@ -25,7 +25,7 @@ function FirstSection() {
     <div className="App">
 
       <header className="App-header">
-        {showPopup1 ? (
+        {/* {showPopup1 ? (
           <>
             <div className="project1">
               <img
@@ -34,14 +34,12 @@ function FirstSection() {
                 className="moving-image-roject1"
                 style={{ width: "7%" }}
               />
-              {/* <p          className="moving-image-roject1"> 
-                Ohh
-              </p> */}
+         
             </div>
           </>
         ) : (
           ""
-        )}
+        )} */}
         <div className="image-container">
           <img
             src={img1}
@@ -84,8 +82,9 @@ function FirstSection() {
               <img
                 src={logo1}
                 alt="YourImage"
-                class="bouncing-image" 
-                style={{ width: "7%" }}
+                className="moving-image-roject1"
+                // class="bouncing-image" 
+                style={{ width: "10%",position:"absolute" }}
               />
        
             </div>

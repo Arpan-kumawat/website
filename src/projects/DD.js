@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 
 import img1 from "../assets/pdf/ddfree/dd-01.png";
+
 import img2 from "../assets/pdf/ddfree/dd-02.jpg";
 import img3 from "../assets/pdf/ddfree/dd-03.jpg";
 import img4 from "../assets/pdf/ddfree/dd-04.jpg";

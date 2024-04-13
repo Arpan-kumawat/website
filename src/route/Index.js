@@ -9,6 +9,8 @@ import DD from '../projects/DD';
 import DDLoader from '../projects/DDLoader';
 import DanPatra from '../projects/DanPatra';
 import Palette from '../projects/Palette';
+import Lincout from '../projects/Lincout';
+import FirstSection from '../Components/FirstSection';
 
 export default function Routeindex() {
   return (
@@ -21,8 +23,9 @@ export default function Routeindex() {
     <Route exact path="/dd" element={<DD/>} />
     <Route exact path="/loader" element={<DDLoader/>} />
     <Route exact path="/palate" element={<Palette/>} />
-    <Route exact path="/dan" element={<DanPatra/>} />
-    <Route exact path="/3" element={<SecondSection />} />
+    <Route exact path="/danPatra" element={<DanPatra/>} />
+    <Route exact path="/Lincout" element={<Lincout/>} />
+    <Route exact path="/3" element={<FirstSection />} />
 
   </Routes>
   )

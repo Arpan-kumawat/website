@@ -50,7 +50,12 @@ export default function Home() {
   };
 
   const togglePopup1 = () => {
-    setShowPopup1(!showPopup1);
+    setShowPopup1(true);
+
+    console.log("click");
+  };
+  const togglePopup2 = () => {
+    setShowPopup1(false);
 
     console.log("click");
   };
@@ -424,8 +429,8 @@ export default function Home() {
                 alt="YourImage"
                 className="moving-image"
                 style={{ width: "5.8%", marginLeft: "0.5rem" }}
-                // onMouseEnter={togglePopup1}
-                // onMouseLeave={togglePopup1}
+                onMouseEnter={togglePopup1}
+                onMouseLeave={togglePopup2}
               />
             </div>
             <Grid container justifyContent="center" class="fadeIn">

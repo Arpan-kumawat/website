@@ -302,7 +302,7 @@ export default function Aboutme() {
                 sm={12}
                 md={6}
                 lg={6}
-                style={{ overflow: "scroll", height: "35vh" }}
+                style={{ overflow: "scroll", height: "35vh" ,scrollbarWidth:"none"}}
               >
                 <Typography style={{ color: "white", textAlign: "justify" }}>
                   It all started with needles and yarns as I dipped my toes into
@@ -400,7 +400,7 @@ export default function Aboutme() {
                 sm={12}
                 md={6}
                 lg={6}
-                style={{ overflow: "scroll", height: "35vh" }}
+                style={{ overflow: "scroll", height: "35vh" ,scrollbarWidth:"none"}}
               >
                 <Typography style={{ color: "white", textAlign: "justify" }}>
                   The wild wanderer with a passion for pixels, pencils and

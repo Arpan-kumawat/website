@@ -72,7 +72,7 @@ export default function Footer() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                margin: "1rem",
+                // margin: "1rem",
                 marginBottom: "3rem",
               }}
             >

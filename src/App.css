@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  /* background-color: whitesmoke; */
+  background-color: brown;
  
 }
 
@@ -135,7 +135,7 @@ margin-top: -8rem;
 
 @keyframes moveFromRightToLeft {
   0% {
-    transform: translateX(200%); /* Start from bottom */
+    transform: translateX(10%); /* Start from bottom */
   }
   100% {
     transform: translateY(0%); /* End at center */
@@ -148,7 +148,7 @@ margin-top: -8rem;
 
 .moving-image-roject1 {
   
-  animation: moveFromRightToLeft 1s forwards; /* 1s duration */
+  animation: moveFromRightToLeft 0.2s forwards; /* 1s duration */
 }
 
 .bouncing-image {
@@ -289,14 +289,14 @@ opacity: 0.6;
 
 .vl {
   border-left: 0.5px solid white;
-  margin-top: 0.8rem;
-  height: 48px;
+  margin-top: 1rem;
+  height: 40px;
 }
 
 .vl1 {
   border-left: 0.5px solid black;
-  margin-top: 0.8rem;
-  height: 48px;
+  margin-top: 1rem;
+  height: 40px;
 }
 
 /* .headerMenu:hover {

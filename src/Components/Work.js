@@ -87,7 +87,11 @@ export default function Work() {
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom">
+                          <div class="zoom"
+                            onClick={() => {
+                              navigate("/danPatra");
+                            }}
+                          >
                             <Typography
                               variant="h5"
                               style={{
@@ -97,7 +101,7 @@ export default function Work() {
                                 textAlign: "start",
                               }}
                             >
-                              DaanPatra 1
+                              DaanPatra 
                             </Typography>
                             <p
                               variant="h7"
@@ -793,9 +797,9 @@ export default function Work() {
                         >
                           <div
                             class="zoom"
-                            // onClick={() => {
-                            //   navigate("/dd");
-                            // }}
+                            onClick={() => {
+                              navigate("/lincout");
+                            }}
                           >
                             <Typography
                               variant="h5"
