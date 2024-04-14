@@ -68,8 +68,6 @@ export default function DanPatra() {
           src={img5}
           style={{ width: "100%", display: "block" }}
         />
-
-
         <img
           alt="logo"
           src={img6}

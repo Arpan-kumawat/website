@@ -219,7 +219,11 @@ export default function Aboutme() {
           )}
 
           {background && (
+          <div   class="textbottom">
+
+    
             <Grid
+          
               container
               xs={12}
               sm={12}
@@ -285,7 +289,8 @@ export default function Aboutme() {
                 </Typography>
               </Grid>
             </Grid>
-          )}
+            </div>
+           )} 
 
           {experience && (
             <Grid

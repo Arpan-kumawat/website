@@ -1,5 +1,5 @@
 // import logo from '../assets/Logo.png';
-import logo1 from "../assets/store_logo.png";
+import logo1 from "../assets/Dana.png";
 import img1 from "../assets/img1.png";
 import img4 from "../assets/img4.png";
 import "../App.css";
@@ -63,14 +63,14 @@ function FirstSection() {
         </div>
 
 
-<Grid style={{marginTop:"5rem"}}>
+{/* <Grid style={{marginTop:"5rem"}}>
 <Typography style={{color:"black"}}>
         <Typewriter onInit={(typewriter) => { typewriter.typeString("asdfasdf asdf asdf asd ").start(); }}
                         />
   
       </Typography>
 
-</Grid>
+</Grid> */}
 <KeyboardArrowDownIcon style={{color:"black",position:"absolute",bottom:"3rem"}} />
 
 
@@ -110,6 +110,8 @@ function FirstSection() {
 ):""} */}
 
       </header>
+      <div class="zoomAbout1">Hover me</div>
+  <div class="textbottom" >Text to display</div>
 
  
       {/* <div className="image-gallery">

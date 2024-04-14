@@ -1,35 +1,27 @@
-\.image-container {
-  position: relative;
-  overflow: hidden;
-  width: 3px; /* Adjust as needed */
-  height: 2px; /* Adjust as needed */
+.container {
+  display: inline-block;
+  margin: 20px;
+  min-height: 100vh;
 }
 
-.image {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: transform 0.5s ease;
+.textbottom2 {
+display: none;
 }
 
-.text {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  transition: transform 0.5s ease;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 10px 20px;
+.textbottom2.visible {
+display: flex;
+}
+
+.zoomAbout2 {
   cursor: pointer;
+  transition: transform .3s; 
+  color: white; 
+  margin: 0 auto; 
+  opacity: 0.6;
 }
 
-.image-container:hover .image {
-  top: -50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.image-container:hover .text {
-  transform: translate(-50%, 0);
+.zoomAbout2:hover {
+  transform: scale(1.2); 
+  color: #DDD50E; 
+  opacity: 1;
 }

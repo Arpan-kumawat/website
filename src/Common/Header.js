@@ -106,7 +106,7 @@ function Header(props) {
 
         <Grid xs={7} sm={7} md={7} lg={5} style={{ display: "flex" }}>
           <Grid container xs={12} sm={12} md={12} lg={12} style={{display: "flex",
-    justifyContent: "flex-end"}}>
+            justifyContent: "flex-end"}}>
             <Grid
               style={{
                 display: "flex",

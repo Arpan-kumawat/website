@@ -14,10 +14,8 @@ import TabPanel from "@mui/lab/TabPanel";
 import logo from "../assets/logo.png";
 import behance from "../assets/behance.png";
 import insta from "../assets/instagram.png";
+import Linocut from "../assets/Linocut.png"
 import linkedin from "../assets/linkedinBlack.png";
-// import heart from "../assets/Heart.png";
-// import heartRed from "../assets/HeartRed.png";
-// import mail from "../assets/Icon.png";
 import Mail from "../assets/MailIcon.png";
 import Istuti from "../assets/iconnew.png";
 import logo2 from "../assets/tri.png";
@@ -304,10 +302,6 @@ export default function Home() {
             </div>
           </Grid>
         </div>
-
-
-
-
         <section class="main" id="section1">
           <div className="App-header">
             {showPopup1 && (
@@ -523,7 +517,7 @@ export default function Home() {
                     </TabList>
                   </Box>
 
-                  <TabPanel value="1">
+                   <TabPanel value="1">
                     <Grid style={{ marginBottom: "5rem" }}>
                       <Grid
                         container
@@ -549,7 +543,11 @@ export default function Home() {
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom">
+                          <div class="zoom"
+                            onClick={() => {
+                              navigate("/danPatra");
+                            }}
+                          >
                             <Typography
                               variant="h5"
                               style={{
@@ -559,7 +557,7 @@ export default function Home() {
                                 textAlign: "start",
                               }}
                             >
-                              DaanPatra 1
+                              DaanPatra 
                             </Typography>
                             <p
                               variant="h7"
@@ -588,10 +586,10 @@ export default function Home() {
                                   // minHeight: "400px",
                                   // minWidth: "400px",
                                 }}
-                                src={project2}
+                                src={porject1}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
@@ -667,16 +665,16 @@ export default function Home() {
                                   // minHeight: "330px",
                                   // minWidth: "330px",
                                 }}
-                                src={porject1}
+                                src={project2}
                                 alt="img"
                               />
-                                <img
+                               <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                  width: "8%",
+                                      width: "8%",
                                   position: "absolute",
-                                  bottom: "15px",
+                                    bottom: "15px",
                                   right: "15px",
                                 }}
                               />
@@ -684,10 +682,10 @@ export default function Home() {
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "3%",
+                                         width: "3%",
                                   position: "absolute",
-                                  bottom: "29px",
-                                  right: "28px",
+                                    bottom: "29px",
+                                  right: "28px"
                                 }}
                               />
                             </div>
@@ -764,9 +762,9 @@ export default function Home() {
                                 src={circle}
                                 alt="img"
                                 style={{
-                                  width: "8%",
+                                      width: "8%",
                                   position: "absolute",
-                                  bottom: "15px",
+                                    bottom: "15px",
                                   right: "15px",
                                 }}
                               />
@@ -774,10 +772,10 @@ export default function Home() {
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "3%",
+                                         width: "3%",
                                   position: "absolute",
-                                  bottom: "29px",
-                                  right: "28px",
+                                    bottom: "29px",
+                                  right: "28px"
                                 }}
                               />
                             </div>
@@ -839,13 +837,13 @@ export default function Home() {
                                 src={porject1}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                  width: "8%",
+                                      width: "8%",
                                   position: "absolute",
-                                  bottom: "15px",
+                                    bottom: "15px",
                                   right: "15px",
                                 }}
                               />
@@ -853,10 +851,10 @@ export default function Home() {
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "3%",
+                                         width: "3%",
                                   position: "absolute",
-                                  bottom: "29px",
-                                  right: "28px",
+                                    bottom: "29px",
+                                  right: "28px"
                                 }}
                               />
                             </div>
@@ -865,7 +863,6 @@ export default function Home() {
                       </Grid>
                     </Grid>
                   </TabPanel>
-
                   <TabPanel value="2">
                     <Grid style={{ marginBottom: "5rem" }}>
                       <Grid
@@ -943,9 +940,9 @@ export default function Home() {
                                 src={circle}
                                 alt="img"
                                 style={{
-                                  width: "8%",
+                                      width: "8%",
                                   position: "absolute",
-                                  bottom: "15px",
+                                    bottom: "15px",
                                   right: "15px",
                                 }}
                               />
@@ -953,10 +950,10 @@ export default function Home() {
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "3%",
+                                         width: "3%",
                                   position: "absolute",
-                                  bottom: "29px",
-                                  right: "28px",
+                                    bottom: "29px",
+                                  right: "28px"
                                 }}
                               />
                             </div>
@@ -1023,13 +1020,13 @@ export default function Home() {
                                 src={ddLoader}
                                 alt="img"
                               />
-                              <img
+                             <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                  width: "8%",
+                                      width: "8%",
                                   position: "absolute",
-                                  bottom: "15px",
+                                    bottom: "15px",
                                   right: "15px",
                                 }}
                               />
@@ -1037,10 +1034,10 @@ export default function Home() {
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "3%",
+                                         width: "3%",
                                   position: "absolute",
-                                  bottom: "29px",
-                                  right: "28px",
+                                    bottom: "29px",
+                                  right: "28px"
                                 }}
                               />
                             </div>
@@ -1117,13 +1114,13 @@ export default function Home() {
                                 src={Palate}
                                 alt="img"
                               />
-                                <img
+                               <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                  width: "8%",
+                                      width: "8%",
                                   position: "absolute",
-                                  bottom: "15px",
+                                    bottom: "15px",
                                   right: "15px",
                                 }}
                               />
@@ -1131,10 +1128,10 @@ export default function Home() {
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "3%",
+                                         width: "3%",
                                   position: "absolute",
-                                  bottom: "29px",
-                                  right: "28px",
+                                    bottom: "29px",
+                                  right: "28px"
                                 }}
                               />
                             </div>
@@ -1201,13 +1198,13 @@ export default function Home() {
                                 src={graphic}
                                 alt="img"
                               />
-                                <img
+                               <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                  width: "8%",
+                                      width: "8%",
                                   position: "absolute",
-                                  bottom: "15px",
+                                    bottom: "15px",
                                   right: "15px",
                                 }}
                               />
@@ -1215,10 +1212,10 @@ export default function Home() {
                                 src={next}
                                 alt="img"
                                 style={{
-                                  width: "3%",
+                                         width: "3%",
                                   position: "absolute",
-                                  bottom: "29px",
-                                  right: "28px",
+                                    bottom: "29px",
+                                  right: "28px"
                                 }}
                               />
                             </div>
@@ -1227,7 +1224,367 @@ export default function Home() {
                       </Grid>
                     </Grid>
                   </TabPanel>
-                  <TabPanel value="3">Item Three</TabPanel>
+                  <TabPanel value="3">
+                  <Grid style={{ marginBottom: "5rem" }}>
+                      <Grid
+                        container
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={12}
+                        style={{
+                          marginTop: "5rem",
+                        }}
+                      >
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/lincout");
+                            }}
+                          >
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                            Linocut
+                            </Typography>
+                            <p
+                              variant="h7"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                             Departmental Elective : What a Relief
+                              <br />
+                              1 Week
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                              class="zoom"
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "400px",
+                                  // minWidth: "400px",
+                                }}
+                                src={Linocut}
+                                alt="img"
+                              />
+                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                      width: "8%",
+                                  position: "absolute",
+                                    bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                         width: "3%",
+                                  position: "absolute",
+                                    bottom: "29px",
+                                  right: "28px"
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/loader");
+                            }}
+                          >
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              DD Free Dish Loader
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Strategies for visual communication
+                              <br />
+                              Strategy Design | UX Design | 12 Weeks
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "330px",
+                                  // minWidth: "330px",
+                                }}
+                                src={ddLoader}
+                                alt="img"
+                              />
+                             <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                      width: "8%",
+                                  position: "absolute",
+                                    bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                         width: "3%",
+                                  position: "absolute",
+                                    bottom: "29px",
+                                  right: "28px"
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+                      </Grid>
+
+                      <Grid
+                        container
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={12}
+                        style={{
+                          marginTop: "5rem",
+                        }}
+                      >
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/palate");
+                            }}
+                          >
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              Palate
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Publication Design
+                              <br />1 Week
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "400px",
+                                  // minWidth: "400px",
+                                }}
+                                src={Palate}
+                                alt="img"
+                              />
+                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                      width: "8%",
+                                  position: "absolute",
+                                    bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                         width: "3%",
+                                  position: "absolute",
+                                    bottom: "29px",
+                                  right: "28px"
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/graphic");
+                            }}
+                          >
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              Instructional Graphic
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Strategies for visual communication
+                              <br />
+                              Strategy Design | UX Design | 12 Weeks
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "330px",
+                                  // minWidth: "330px",
+                                }}
+                                src={graphic}
+                                alt="img"
+                              />
+                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                      width: "8%",
+                                  position: "absolute",
+                                    bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                         width: "3%",
+                                  position: "absolute",
+                                    bottom: "29px",
+                                  right: "28px"
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </TabPanel>
                   <TabPanel value="4">Item Three</TabPanel>
                 </TabContext>
               </Box>

@@ -130,7 +130,7 @@ export default function Work() {
                                   // minHeight: "400px",
                                   // minWidth: "400px",
                                 }}
-                                src={project2}
+                                src={porject1}
                                 alt="img"
                               />
                               <img
@@ -209,7 +209,7 @@ export default function Work() {
                                   // minHeight: "330px",
                                   // minWidth: "330px",
                                 }}
-                                src={porject1}
+                                src={project2}
                                 alt="img"
                               />
                                <img
@@ -407,7 +407,6 @@ export default function Work() {
                       </Grid>
                     </Grid>
                   </TabPanel>
-
                   <TabPanel value="2">
                     <Grid style={{ marginBottom: "5rem" }}>
                       <Grid

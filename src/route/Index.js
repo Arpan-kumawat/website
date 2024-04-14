@@ -17,7 +17,7 @@ export default function Routeindex() {
     <Routes>
  
     <Route exact path="/" element={<Home />} />
-    <Route exact path="/aboutme" element={<Aboutme  />} />
+    <Route exact path="/3" element={<Aboutme  />} />
     <Route exact path="/work" element={<Work  />} />
     <Route exact path="/graphic" element={<Graphic/>} />
     <Route exact path="/dd" element={<DD/>} />
@@ -25,7 +25,7 @@ export default function Routeindex() {
     <Route exact path="/palate" element={<Palette/>} />
     <Route exact path="/danPatra" element={<DanPatra/>} />
     <Route exact path="/Lincout" element={<Lincout/>} />
-    <Route exact path="/3" element={<FirstSection />} />
+    <Route exact path="/aboutme" element={<SecondSection />} />
 
   </Routes>
   )
