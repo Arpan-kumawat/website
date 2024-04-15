@@ -1,16 +1,3 @@
-.container {
-  display: inline-block;
-  margin: 20px;
-  min-height: 100vh;
-}
-
-.textbottom2 {
-display: none;
-}
-
-.textbottom2.visible {
-display: flex;
-}
 
 .zoomAbout2 {
   cursor: pointer;

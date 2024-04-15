@@ -277,7 +277,7 @@ justify-content: center;
 
 
 
-.zoomAbout {
+/* .zoomAbout {
   cursor: pointer;
   transition: transform .3s; 
   color: white; 
@@ -291,13 +291,13 @@ opacity: 0.6;
   transform: scale(1.2); 
   color: #DDD50E; 
   opacity: 1;
-}
+} */
 .zoomedImg{
   -ms-transform: scale(1.2); 
   -webkit-transform: scale(1.2); 
   transform: scale(1.2); 
 }
-
+/* About CSS */
 .vl {
   border-left: 0.5px solid white;
   margin-top: 1rem;
@@ -385,5 +385,114 @@ width: 100%;
  }
 
 }
+
+@keyframes moveUpAndDisappear {
+  0% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(-100px); 
+  }
+}
+
+.animated-text {
+  animation: moveUpAndDisappear 2s forwards; 
+}
+
+@keyframes resetPosition {
+  to 
+  0% {
+    transform: rotate(30deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    position: static;
+  }
+
+
+}
+
+
+
+.animatedImg1 {
+  position: absolute;
+  transform: rotate(30deg);
+  transition: transform .9s; 
+  animation: resetPosition 2s 1.7s forwards; 
+  
+}
+
+.animatedImg2 {
+  position: absolute;
+  transform: rotate(20deg);
+  transition: transform .7s; 
+  animation: resetPosition 2s 1.7s forwards; 
+}
+
+.animatedImg3 {
+  position: absolute;
+  transform: rotate(10deg);
+  transition: transform .5s; 
+  animation: resetPosition 2s 1.5s forwards; 
+}
+
+.animatedImg4 {
+  position: absolute;
+  transition: transform .3s; 
+  animation: resetPosition 2s 1.3s forwards; 
+}
+
+@keyframes resetPosition1 {
+  to {
+    width: 60%;
+      
+  }
+}
+
+.imgWidth{
+width: 60%;
+/* animation: resetPosition1 2s 3s forwards;  */
+}
+
+
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: 1s fadeInUp;
+}
+
+
+/* .animatedImg3:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease; 
+}
+
+.animatedImg4:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease; 
+}
+.animatedImg2:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease; 
+}
+.animatedImg1:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease; 
+} */
 
 /* https://www.figma.com/file/y9gvaig6UbYU1ZxSI7VaXK/Portfolioooooooo?type=design&node-id=0-1&mode=design&t=spLFkoDoaIR6zepp-0 */

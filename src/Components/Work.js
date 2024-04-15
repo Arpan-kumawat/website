@@ -9,12 +9,16 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Palate from "../assets/palate.png";
 
+import msme from "../assets/msmenew.png";
+
 import porject1 from "../assets/Dana.png";
 import project2 from "../assets/MSME.png";
 
 import dd from "../assets/dd.png";
 import ddLoader from "../assets/ddLoader.png";
 import graphic from "../assets/Graphic.png";
+
+import bookCover from "../assets/bookCover.png";
 
 import Linocut from "../assets/Linocut.png";
 
@@ -171,7 +175,10 @@ export default function Work() {
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom">
+                          <div class="zoom"
+                             onClick={() => {
+                              navigate("/msme");
+                            }}>
                             <Typography
                               variant="h5"
                               style={{
@@ -181,7 +188,7 @@ export default function Work() {
                                 textAlign: "start",
                               }}
                             >
-                              DaanPatra
+                        MSME Sathi
                             </Typography>
                             <p
                               variant="h6"
@@ -193,9 +200,9 @@ export default function Work() {
                                 fontWeight: 300,
                               }}
                             >
-                              Context and Information Systems
+                           Strategies for visual communication
                               <br />
-                              UX Design | UI Design | 8 Weeks
+                              Strategy Design | UX Design | 12 Weeks
                             </p>
                             <div
                               style={{ position: "relative", display: "flex" }}
@@ -209,7 +216,7 @@ export default function Work() {
                                   // minHeight: "330px",
                                   // minWidth: "330px",
                                 }}
-                                src={project2}
+                                src={msme}
                                 alt="img"
                               />
                                <img
@@ -766,6 +773,185 @@ export default function Work() {
                           </div>
                         </Grid>
                       </Grid>
+
+                      <Grid
+                        container
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={12}
+                        style={{
+                          marginTop: "5rem",
+                        }}
+                      >
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/book-cover");
+                            }}
+                          >
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                          Book Cover Re-Design
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                           Publication Design
+                              <br />1 Week
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "400px",
+                                  // minWidth: "400px",
+                                }}
+                                src={bookCover}
+                                alt="img"
+                              />
+                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                      width: "8%",
+                                  position: "absolute",
+                                    bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                         width: "3%",
+                                  position: "absolute",
+                                    bottom: "29px",
+                                  right: "28px"
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={6}
+                          lg={6}
+                          style={{
+                            // minWidth: "25rem",
+                            // minHight: "20rem",
+                            // margin: "1rem",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/graphic");
+                            }}
+                          >
+                            <Typography
+                              variant="h5"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                fontWeight: 500,
+                                textAlign: "start",
+                              }}
+                            >
+                              Instructional Graphic
+                            </Typography>
+                            <p
+                              variant="h6"
+                              style={{
+                                // color: "white",
+                                margin: "1rem",
+                                textAlign: "left",
+                                marginTop: "0rem",
+                                fontWeight: 300,
+                              }}
+                            >
+                              Strategies for visual communication
+                              <br />
+                              Strategy Design | UX Design | 12 Weeks
+                            </p>
+                            <div
+                              style={{ position: "relative", display: "flex" }}
+                            >
+                              <img
+                                style={{
+                                  borderRadius: "20px",
+                                  marginTop: "3rem",
+                                  // maxWidth: "400px",
+                                  // maxHeight: "400px",
+                                  // minHeight: "330px",
+                                  // minWidth: "330px",
+                                }}
+                                src={graphic}
+                                alt="img"
+                              />
+                               <img
+                                src={circle}
+                                alt="img"
+                                style={{
+                                      width: "8%",
+                                  position: "absolute",
+                                    bottom: "15px",
+                                  right: "15px",
+                                }}
+                              />
+                                <img
+                                src={next}
+                                alt="img"
+                                style={{
+                                         width: "3%",
+                                  position: "absolute",
+                                    bottom: "29px",
+                                  right: "28px"
+                                }}
+                              />
+                            </div>
+                          </div>
+                        </Grid>
+                      </Grid>
+
                     </Grid>
                   </TabPanel>
                   <TabPanel value="3">
@@ -1129,6 +1315,9 @@ export default function Work() {
                       </Grid>
                     </Grid>
                   </TabPanel>
+
+
+                  
                   <TabPanel value="4">Item Three</TabPanel>
                 </TabContext>
               </Box>

@@ -26,9 +26,10 @@ const SecondSection = () => {
       >
        <Header page={"about"} />
 
-       
+      
 
         <div style={{ minHeight: "100vh" }}>
+
           <div>
 
     
@@ -509,6 +510,7 @@ const SecondSection = () => {
             </Grid>
           )}
         </div>
+
       </div>
       </div>
       <Footer/>
