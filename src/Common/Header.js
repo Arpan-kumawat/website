@@ -28,6 +28,7 @@ function Header(props) {
   // const [work, setWork] = useState(false);
   const [isLOGOHovered, setIsLOGOHovered] = useState(false);
 
+  console.log(props?.project)
 
   const Drawer1 = () => {
     return (
@@ -167,8 +168,9 @@ function Header(props) {
                   fontSize: "1rem",
                   fontWeight: 400,
                 }}
+              
                 onClick={() => {
-                  navigate("/work");
+                  navigate("/work", { state: { key: props?.project } });
                 }}
               >
                 <Typography

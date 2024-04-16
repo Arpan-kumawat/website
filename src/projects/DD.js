@@ -21,7 +21,7 @@ export default function DD() {
   return (
     <>
       <div>
-        <Header page={"work"} />
+        <Header page={"work"} project={"dd"} />
 
         <div style={{ paddingTop: "3rem" }}>
           <img

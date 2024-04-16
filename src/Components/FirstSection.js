@@ -414,7 +414,7 @@ TRIPATHI
       paddingBottom: "10rem",
     }}
   >
-    <Grid item xs={12} sm={12} md={6} lg={6}>
+    <Grid item xs={12} sm={12} md={6} lg={6}  style={{ overflow: "scroll", height: "35vh" ,scrollbarWidth:"none"}}>
       <Typography style={{ color: "white", textAlign: "justify" }}>
         Welcome to my creative journey!
       </Typography>
@@ -449,7 +449,7 @@ TRIPATHI
           color: "white",
           textAlign: "right",
           fontSize: "5rem",
-          position: "absolute",
+          // position: "absolute",
           top: "75%",
         }}
       >
@@ -474,7 +474,7 @@ TRIPATHI
     lg={12}
     style={{ padding: "4rem", paddingTop: "4rem" }}
   >
-    <Grid item xs={12} sm={12} md={6} lg={6}>
+    <Grid item xs={12} sm={12} md={6} lg={6}  style={{ overflow: "scroll", height: "35vh" ,scrollbarWidth:"none"}}>
       <Typography style={{ color: "white", textAlign: "justify" }}>
         Born in the bustling city of Kanpur and raised in different
         parts of the country, my journey as a designer has been deeply
@@ -524,7 +524,7 @@ TRIPATHI
           color: "white",
           textAlign: "right",
           fontSize: "5rem",
-          position: "absolute",
+          // position: "absolute",
           top: "75%",
         }}
       >
@@ -625,7 +625,7 @@ TRIPATHI
           color: "white",
           textAlign: "right",
           fontSize: "5rem",
-          position: "absolute",
+          // position: "absolute",
           top: "75%",
         }}
       >
@@ -722,7 +722,7 @@ TRIPATHI
           color: "white",
           textAlign: "right",
           fontSize: "5rem",
-          position: "absolute",
+          // position: "absolute",
           top: "75%",
         }}
       >

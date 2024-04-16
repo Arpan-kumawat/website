@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useRef} from "react";
 import "../App.css";
 import { Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -18,6 +18,10 @@ import dd from "../assets/dd.png";
 import ddLoader from "../assets/ddLoader.png";
 import graphic from "../assets/Graphic.png";
 
+import jenga from "../assets/jenga.png";
+
+import kitchen from "../assets/kitchen.png";
+
 import bookCover from "../assets/bookCover.png";
 
 import Linocut from "../assets/Linocut.png";
@@ -26,14 +30,19 @@ import next from "../assets/right.png";
 import circle from "../assets/circle.png";
 import Header from "../Common/Header";
 
-export default function Work() {
+export default function Work(props) {
   const navigate = useNavigate();
+
+  const passedValue = props.location ? props.location.state.key : null;
+
+  console.log(passedValue)
 
   const [value, setValue] = useState("1");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
 
   return (
     <>
@@ -91,7 +100,8 @@ export default function Work() {
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom"
+                          <div
+                            class="zoom"
                             onClick={() => {
                               navigate("/danPatra");
                             }}
@@ -105,7 +115,7 @@ export default function Work() {
                                 textAlign: "start",
                               }}
                             >
-                              DaanPatra 
+                              DaanPatra
                             </Typography>
                             <p
                               variant="h7"
@@ -147,7 +157,7 @@ export default function Work() {
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
@@ -175,10 +185,13 @@ export default function Work() {
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom"
-                             onClick={() => {
+                          <div
+                            class="zoom"
+                            onClick={() => {
                               navigate("/msme");
-                            }}>
+                              setValue("2");
+                            }}
+                          >
                             <Typography
                               variant="h5"
                               style={{
@@ -188,7 +201,7 @@ export default function Work() {
                                 textAlign: "start",
                               }}
                             >
-                        MSME Sathi
+                              MSME Sathi
                             </Typography>
                             <p
                               variant="h6"
@@ -200,7 +213,7 @@ export default function Work() {
                                 fontWeight: 300,
                               }}
                             >
-                           Strategies for visual communication
+                              Strategies for visual communication
                               <br />
                               Strategy Design | UX Design | 12 Weeks
                             </p>
@@ -219,24 +232,24 @@ export default function Work() {
                                 src={msme}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -268,7 +281,12 @@ export default function Work() {
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom">
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/jenga");
+                            }}
+                          >
                             <Typography
                               variant="h5"
                               style={{
@@ -278,7 +296,7 @@ export default function Work() {
                                 textAlign: "start",
                               }}
                             >
-                              DaanPatra
+                              Digital Game Design : Jenga
                             </Typography>
                             <p
                               variant="h6"
@@ -290,9 +308,9 @@ export default function Work() {
                                 fontWeight: 300,
                               }}
                             >
-                              Context and Information Systems
+                              Design Challenge
                               <br />
-                              UX Design | UI Design | 8 Weeks
+                              Game Design | UI/UX Design | 2 Days
                             </p>
                             <div
                               style={{ position: "relative", display: "flex" }}
@@ -306,27 +324,27 @@ export default function Work() {
                                   // minHeight: "400px",
                                   // minWidth: "400px",
                                 }}
-                                src={project2}
+                                src={jenga}
                                 alt="img"
                               />
-                                <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -347,7 +365,12 @@ export default function Work() {
                             justifyContent: "center",
                           }}
                         >
-                          <div class="zoom">
+                          <div
+                            class="zoom"
+                            onClick={() => {
+                              navigate("/kitchen");
+                            }}
+                          >
                             <Typography
                               variant="h5"
                               style={{
@@ -357,7 +380,7 @@ export default function Work() {
                                 textAlign: "start",
                               }}
                             >
-                              DaanPatra
+                              System Study : Kitchen
                             </Typography>
                             <p
                               variant="h6"
@@ -369,9 +392,9 @@ export default function Work() {
                                 fontWeight: 300,
                               }}
                             >
-                              Context and Information Systems
+                              Research methodology
                               <br />
-                              UX Design | UI Design | 8 Weeks
+                              System Design | UI/UX Design | 2 Weeks
                             </p>
                             <div
                               style={{ position: "relative", display: "flex" }}
@@ -385,27 +408,27 @@ export default function Work() {
                                   // minHeight: "330px",
                                   // minWidth: "330px",
                                 }}
-                                src={porject1}
+                                src={kitchen}
                                 alt="img"
                               />
                               <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -487,24 +510,24 @@ export default function Work() {
                                 src={dd}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -571,24 +594,24 @@ export default function Work() {
                                 src={ddLoader}
                                 alt="img"
                               />
-                             <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -665,24 +688,24 @@ export default function Work() {
                                 src={Palate}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -749,24 +772,24 @@ export default function Work() {
                                 src={graphic}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -813,7 +836,7 @@ export default function Work() {
                                 textAlign: "start",
                               }}
                             >
-                          Book Cover Re-Design
+                              Book Cover Re-Design
                             </Typography>
                             <p
                               variant="h6"
@@ -825,7 +848,7 @@ export default function Work() {
                                 fontWeight: 300,
                               }}
                             >
-                           Publication Design
+                              Publication Design
                               <br />1 Week
                             </p>
                             <div
@@ -843,24 +866,24 @@ export default function Work() {
                                 src={bookCover}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -927,35 +950,34 @@ export default function Work() {
                                 src={graphic}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
                           </div>
                         </Grid>
                       </Grid>
-
                     </Grid>
                   </TabPanel>
                   <TabPanel value="3">
-                  <Grid style={{ marginBottom: "5rem" }}>
+                    <Grid style={{ marginBottom: "5rem" }}>
                       <Grid
                         container
                         xs={12}
@@ -995,7 +1017,7 @@ export default function Work() {
                                 textAlign: "start",
                               }}
                             >
-                            Linocut
+                              Linocut
                             </Typography>
                             <p
                               variant="h7"
@@ -1007,9 +1029,8 @@ export default function Work() {
                                 fontWeight: 300,
                               }}
                             >
-                             Departmental Elective : What a Relief
-                              <br />
-                              1 Week
+                              Departmental Elective : What a Relief
+                              <br />1 Week
                             </p>
                             <div
                               style={{ position: "relative", display: "flex" }}
@@ -1027,24 +1048,24 @@ export default function Work() {
                                 src={Linocut}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -1111,24 +1132,24 @@ export default function Work() {
                                 src={ddLoader}
                                 alt="img"
                               />
-                             <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -1205,24 +1226,24 @@ export default function Work() {
                                 src={Palate}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -1289,24 +1310,24 @@ export default function Work() {
                                 src={graphic}
                                 alt="img"
                               />
-                               <img
+                              <img
                                 src={circle}
                                 alt="img"
                                 style={{
-                                      width: "8%",
+                                  width: "8%",
                                   position: "absolute",
-                                    bottom: "15px",
+                                  bottom: "15px",
                                   right: "15px",
                                 }}
                               />
-                                <img
+                              <img
                                 src={next}
                                 alt="img"
                                 style={{
-                                         width: "3%",
+                                  width: "3%",
                                   position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
+                                  bottom: "29px",
+                                  right: "28px",
                                 }}
                               />
                             </div>
@@ -1316,8 +1337,6 @@ export default function Work() {
                     </Grid>
                   </TabPanel>
 
-
-                  
                   <TabPanel value="4">Item Three</TabPanel>
                 </TabContext>
               </Box>
@@ -1397,25 +1416,25 @@ export default function Work() {
                           alt="img"
                         />
                         <img
-                                src={circle}
-                                alt="img"
-                                style={{
-                                      width: "8%",
-                                  position: "absolute",
-                                    bottom: "15px",
-                                  right: "15px",
-                                }}
-                              />
-                                <img
-                                src={next}
-                                alt="img"
-                                style={{
-                                         width: "3%",
-                                  position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
-                                }}
-                              />
+                          src={circle}
+                          alt="img"
+                          style={{
+                            width: "8%",
+                            position: "absolute",
+                            bottom: "15px",
+                            right: "15px",
+                          }}
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "3%",
+                            position: "absolute",
+                            bottom: "29px",
+                            right: "28px",
+                          }}
+                        />
                       </div>
                     </div>
                   </Grid>
@@ -1476,26 +1495,26 @@ export default function Work() {
                           src={project2}
                           alt="img"
                         />
-                         <img
-                                src={circle}
-                                alt="img"
-                                style={{
-                                      width: "8%",
-                                  position: "absolute",
-                                    bottom: "15px",
-                                  right: "15px",
-                                }}
-                              />
-                                <img
-                                src={next}
-                                alt="img"
-                                style={{
-                                         width: "3%",
-                                  position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
-                                }}
-                              />
+                        <img
+                          src={circle}
+                          alt="img"
+                          style={{
+                            width: "8%",
+                            position: "absolute",
+                            bottom: "15px",
+                            right: "15px",
+                          }}
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "3%",
+                            position: "absolute",
+                            bottom: "29px",
+                            right: "28px",
+                          }}
+                        />
                       </div>
                     </div>
                   </Grid>
@@ -1559,25 +1578,25 @@ export default function Work() {
                           alt="img"
                         />
                         <img
-                                src={circle}
-                                alt="img"
-                                style={{
-                                      width: "8%",
-                                  position: "absolute",
-                                    bottom: "15px",
-                                  right: "15px",
-                                }}
-                              />
-                                <img
-                                src={next}
-                                alt="img"
-                                style={{
-                                         width: "3%",
-                                  position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
-                                }}
-                              />
+                          src={circle}
+                          alt="img"
+                          style={{
+                            width: "8%",
+                            position: "absolute",
+                            bottom: "15px",
+                            right: "15px",
+                          }}
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "3%",
+                            position: "absolute",
+                            bottom: "29px",
+                            right: "28px",
+                          }}
+                        />
                       </div>
                     </div>
                   </Grid>
@@ -1638,26 +1657,26 @@ export default function Work() {
                           src={project2}
                           alt="img"
                         />
-                          <img
-                                src={circle}
-                                alt="img"
-                                style={{
-                                      width: "8%",
-                                  position: "absolute",
-                                    bottom: "15px",
-                                  right: "15px",
-                                }}
-                              />
-                                <img
-                                src={next}
-                                alt="img"
-                                style={{
-                                         width: "3%",
-                                  position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
-                                }}
-                              />
+                        <img
+                          src={circle}
+                          alt="img"
+                          style={{
+                            width: "8%",
+                            position: "absolute",
+                            bottom: "15px",
+                            right: "15px",
+                          }}
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "3%",
+                            position: "absolute",
+                            bottom: "29px",
+                            right: "28px",
+                          }}
+                        />
                       </div>
                     </div>
                   </Grid>
@@ -1736,26 +1755,26 @@ export default function Work() {
                           src={project2}
                           alt="img"
                         />
-                         <img
-                                src={circle}
-                                alt="img"
-                                style={{
-                                      width: "8%",
-                                  position: "absolute",
-                                    bottom: "15px",
-                                  right: "15px",
-                                }}
-                              />
-                                <img
-                                src={next}
-                                alt="img"
-                                style={{
-                                         width: "3%",
-                                  position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
-                                }}
-                              />
+                        <img
+                          src={circle}
+                          alt="img"
+                          style={{
+                            width: "8%",
+                            position: "absolute",
+                            bottom: "15px",
+                            right: "15px",
+                          }}
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "3%",
+                            position: "absolute",
+                            bottom: "29px",
+                            right: "28px",
+                          }}
+                        />
                       </div>
                     </div>
                   </Grid>
@@ -1816,26 +1835,26 @@ export default function Work() {
                           src={project2}
                           alt="img"
                         />
-                       <img
-                                src={circle}
-                                alt="img"
-                                style={{
-                                      width: "8%",
-                                  position: "absolute",
-                                    bottom: "15px",
-                                  right: "15px",
-                                }}
-                              />
-                                <img
-                                src={next}
-                                alt="img"
-                                style={{
-                                         width: "3%",
-                                  position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
-                                }}
-                              />
+                        <img
+                          src={circle}
+                          alt="img"
+                          style={{
+                            width: "8%",
+                            position: "absolute",
+                            bottom: "15px",
+                            right: "15px",
+                          }}
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "3%",
+                            position: "absolute",
+                            bottom: "29px",
+                            right: "28px",
+                          }}
+                        />
                       </div>
                     </div>
                   </Grid>
@@ -1899,25 +1918,25 @@ export default function Work() {
                           alt="img"
                         />
                         <img
-                                src={circle}
-                                alt="img"
-                                style={{
-                                      width: "8%",
-                                  position: "absolute",
-                                    bottom: "15px",
-                                  right: "15px",
-                                }}
-                              />
-                                <img
-                                src={next}
-                                alt="img"
-                                style={{
-                                         width: "3%",
-                                  position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
-                                }}
-                              />
+                          src={circle}
+                          alt="img"
+                          style={{
+                            width: "8%",
+                            position: "absolute",
+                            bottom: "15px",
+                            right: "15px",
+                          }}
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "3%",
+                            position: "absolute",
+                            bottom: "29px",
+                            right: "28px",
+                          }}
+                        />
                       </div>
                     </div>
                   </Grid>
@@ -1978,26 +1997,26 @@ export default function Work() {
                           src={project2}
                           alt="img"
                         />
-                         <img
-                                src={circle}
-                                alt="img"
-                                style={{
-                                      width: "8%",
-                                  position: "absolute",
-                                    bottom: "15px",
-                                  right: "15px",
-                                }}
-                              />
-                                <img
-                                src={next}
-                                alt="img"
-                                style={{
-                                         width: "3%",
-                                  position: "absolute",
-                                    bottom: "29px",
-                                  right: "28px"
-                                }}
-                              />
+                        <img
+                          src={circle}
+                          alt="img"
+                          style={{
+                            width: "8%",
+                            position: "absolute",
+                            bottom: "15px",
+                            right: "15px",
+                          }}
+                        />
+                        <img
+                          src={next}
+                          alt="img"
+                          style={{
+                            width: "3%",
+                            position: "absolute",
+                            bottom: "29px",
+                            right: "28px",
+                          }}
+                        />
                       </div>
                     </div>
                   </Grid>
